@@ -1,0 +1,75 @@
+HOMEWORK:::::
+1.	What is class?
+2.	Tell me Different Data types in Java which we learn.
+3.	Tell me about int.
+4.	Tell me about String
+5.	Tell me about boolean
+6.	Explain to me how if/else loop works
+7.	Explain to me how for loop works
+8.	Explain to me how while loop works
+9.	Explain to me how do-while loop works
+10.	Tell me what is variable and how to declare variable
+11.	 Difference between = and ==
+12.	Tell me main difference between while loop and do-while loop
+13.	Explain me steps to create project then package then class in eclipse
+14.	Given two int, and please write code to find sum of these two int.
+15.	Write code to find out given int is positive or negative number.
+16.	Use for loop to find factorial for number 10.
+17.	If x=10 and sum=0, what is the value of sum after each of the expressions: sum=++x 	sum=x++ 
+18.	 If originally x=10 and sub=0 what is the value of sub after each of the expressions:sub=--x 	sub=x--
+19.	Tell me all logical operator in Java language
+20.	Tell me about all comparison operator in java
+21.	Evaluate the following expressions to true or false::::::a.3!=4-1   b. 5>=(1+6)-4   c.5+1==6 || 8-1>4   d.5>=6 || 1<8 && 9>7
+22.	The purpose of using a loop is to
+a. Repeat operation(s) many times   	b. make decision
+
+23.	Change the following Java code from using a while loop to for loop:
+x=1;
+while(x<10){ 
+ System.out.println(x+"\t");
+++x;
+}
+24.	Write a Java program to print 'Hello' on screen and then print your name on a separate 
+25.	Write a Java program to print numbers between 1 to 100 which are divisible by 3, 5 and by both. Sample Output:  
+         Divided by 3:                                                          
+3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57
+, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99,              
+                                                                       
+Divided by 5:                                                          
+5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 
+95,                                                                    
+                                                                       
+Divided by 3 & 5:                                                      
+15, 30, 45, 60, 75, 90,
+26.	Write a java code to check below three string, print “it is large string” if it’s size is greater than 10.  Sample string: “peoplentech”, “techhhhh”, “javalearningggg”
+27.	Give int a=10, b=25, c=35, d=-10, compare these four int and print out minimum one and maximum one.
+28.	Write a java code to find out sum of 10-99.
+29.	Write a java code to display below, need to use two for loop.
+1
+2 3
+4 5 6
+7 8 9 10
+
+
+30.	Write a Java program to get the index of all the characters of the alphabet.  Sample string: “peoplentech”
+Print out index of each character plus character itself.
+31.	Write a Java program to get the last index of a string , sample string: “The quick brown fox jumps over the lazy dog.”
+32.	Write a java program to get the length of a given string.
+33.	Write a Java program to replace all the 'd' characters with 'f' characters.sample string: “i likd workd deaf loooddddd ddoppppp da de!!!”
+34.	Replace first “sel” with “UFT” in below string, “i have learn sel and sel is super useaful, using sel a lot.”
+35.	Write a Java program to check whether a given string starts with the contents of another string. Check String”peoplntech” is start with “people”
+36.	Find substring from below string at 7 and 19 position. Sample string:”hi how r u doing, how is work? Keep in touch”
+37.	Write a Java program to convert all the characters in a string to uppercase and lowercase.
+38.	Write a code to check if two string are equal or not. “peopleloving” and “peoplefloving”
+39.	Write a code to check if two string are equal in ignoring case mode or not. “PeopleLoving” and “peopleloving”
+40.	Write a Java program to display the asterisk pattern as shown below: 
+*
+***
+*****
+******* 
+41.	Find any errors in the following Java program:
+ class JavaProgram{
+public static void main(string[] args){ /* This is the main method
+System.out.println('Java Programming questions and answers');
+       }} 
+
