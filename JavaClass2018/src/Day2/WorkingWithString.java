@@ -30,6 +30,11 @@ public class WorkingWithString {
 		System.out.println(region.substring(region.indexOf("S"),11));
 		System.out.println(region.substring(4,region.indexOf("A")+1)); 
 		
+		System.out.println("-----------------------------------------");
+		
+		String phrase ="State of States";
+		
+		System.out.println(phrase.indexOf("States")); 
 		
 		System.out.println(region.concat(country));// Concatinates the String data with spaces between them
 		
@@ -84,14 +89,14 @@ public class WorkingWithString {
 		String sp = "            This has Wide space              ";
 		
 		System.out.println(sp.trim());// gets rid if the extra spaces before and after the text
-		
+		region = "United Kingdom";
 		System.out.println(a1.startsWith("free")); // Check if the String starts with
 		System.out.println(region.startsWith("united"));
 		System.out.println(region.startsWith("United"));
 		
 		System.out.println(region.endsWith("America")); // Checks if the string ends with
 		
-		
+		System.out.println(sp.indexOf('T'));
 		
 		
 	}
