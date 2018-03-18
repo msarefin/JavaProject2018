@@ -75,18 +75,16 @@ public class JavaHomeworkTest {
 //		System.out.println("The sum of numbers between 10 and 99 is " + sum);
 //		
 		
-		for (int i = 1; i <= 10; i++) 
-        {
-            int num = i;
-             
-            for (int j = 1; j <= i; j++) 
-            {
-                System.out.print(num+" ");
-                 
-                num = num+10s-j;
-            }
-             
-            System.out.println();
-        }
+		int n = 1; 
+		int row;
+		for(int i =1;i <=4;i++) {
+			System.out.print("Row "+ i+ " | ");
+			for(int j = 1; j<=i;j++) {
+				System.out.print(n+" ");
+				n++;
+			}
+			System.out.println();
+		}
+        
 	}
 }
