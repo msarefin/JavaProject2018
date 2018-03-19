@@ -55,6 +55,7 @@ public class WorkingWithString {
 		String b1 = "fred lol"; // d is 100 on ANSI
 		System.out.println(a1.compareTo(b1)); // returns 1 . Compares only the first character
 		
+		System.out.println("Check for equals!");
 		System.out.println(a1.equals(b1)); // compares two  strings to determine if they are the same
 		
 		boolean t = true; 
