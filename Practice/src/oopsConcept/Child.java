@@ -12,8 +12,13 @@ public class Child extends Parent{
 		System.out.println("--------------------");
 		comp("sunday","sunday");
 		
+		
+		
 	}
 
+	public static void children(String a) {
+		System.out.println(a);
+	}
 	
 	
 }
