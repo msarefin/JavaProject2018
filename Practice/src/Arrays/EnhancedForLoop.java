@@ -11,7 +11,7 @@ public class EnhancedForLoop {
 			System.out.println("The value of Array is "+t);
 			
 		}
-		
+		// Enhanced for loop is also known as For each loop
 		for(String i: b) {
 			System.out.println("The Vale of b is "+b);
 		}

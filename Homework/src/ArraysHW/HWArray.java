@@ -5,7 +5,7 @@ public class HWArray {
 	public static void main(String[] args) {
 		
 
-		ArrayMethod y = new ArrayMethod();
+		//ArrayMethod y = new ArrayMethod();
 		
 	
 

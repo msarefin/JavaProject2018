@@ -30,8 +30,8 @@ public class ArrayMethod {
 		System.out.println(min);
 		
 		for(int j =0; j <number.length; j++) {
-			if(number[j]>min) {
-				min = number[j];
+			if(number[j]>max) {
+				max = number[j];
 			}
 		}
 		
