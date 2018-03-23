@@ -13,7 +13,7 @@ public class EnhancedForLoop {
 		}
 		// Enhanced for loop is also known as For each loop
 		for(String i: b) {
-			System.out.println("The Vale of b is "+b);
+			System.out.println("The Vale of b is "+i);
 		}
 	}
 }

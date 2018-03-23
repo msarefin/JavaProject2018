@@ -7,7 +7,7 @@ public static void main(String[]args) {
 		String p="peoplentech";
 		char c; 
 		int l = p.length(); 
-		byte n; 
+//		byte n; 
 		System.out.println(p+" is "+l+" \n Characters long");
 		System.out.println("-----------------");
 		

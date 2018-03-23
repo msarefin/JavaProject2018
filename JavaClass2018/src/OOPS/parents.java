@@ -4,7 +4,7 @@ public class parents {
 	
 	public static String v = "Hello";
 	public String c = "hahahahahahaha";
-	static String s = "why?";
+	String s = "why?";
 			
 
 	public static void summ(int a ) {

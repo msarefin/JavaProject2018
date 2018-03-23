@@ -35,6 +35,8 @@ public class day1 {
 		
 		boolean online = true;
 		
+		
+		System.out.println(a+" "+b+" "+c+" "+name);
 		System.out.println(group);
 		
 		System.out.println(online);

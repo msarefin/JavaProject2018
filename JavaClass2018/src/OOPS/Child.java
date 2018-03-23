@@ -10,9 +10,9 @@ public class Child extends parents{
 		parents c = new parents();
 		
 		c.comp("Sunday", "Monday");
-		
+		String s = c.s; 
 		System.out.println(c.c);
-		System.out.println(c.s);
+		System.out.println(s);
 	}
 	
 	public static void children(String a) {

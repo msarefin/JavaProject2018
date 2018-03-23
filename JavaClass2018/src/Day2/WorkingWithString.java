@@ -59,7 +59,7 @@ public class WorkingWithString {
 		System.out.println(a1.equals(b1)); // compares two  strings to determine if they are the same
 		
 		boolean t = true; 
-		boolean f = false; 
+//		boolean f = false; 
 		
 		System.out.println(t);
 		
