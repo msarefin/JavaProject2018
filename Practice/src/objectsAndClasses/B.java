@@ -8,8 +8,12 @@ public class B {
 		
 		a.horn();
 		
-		System.out.println(a.x);
-		System.out.println(a.p);
+		System.out.println(a.p); //default string from class A can be accessed here
+		System.out.println(a.x); //public String  from class A can be accessed here
+		
+//		a.y private cannot be accessed from class A 
+		
+		System.out.println(a.z);
 	}
 	
 }
