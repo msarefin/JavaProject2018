@@ -2,6 +2,7 @@ package classesAndObjects;
 
 import objectsAndClasses.A;
 import objectsAndClasses.B;
+import objectsAndClasses.D;
 
 public class AccessTest {
 
@@ -9,8 +10,12 @@ public class AccessTest {
 		
 		A a = new A();
 		B b = new B();
+		D d = new D();
 		
 		a.horn();
+		a.aPublic();
+		
+		
 		
 		
 		
