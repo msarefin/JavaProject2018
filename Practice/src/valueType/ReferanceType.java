@@ -8,7 +8,7 @@ public class ReferanceType {
 		/* Created a reference variable by creating an object (instance of a class)
 		 * Reference variable stores a reference on the memory
 		 */
-		j = new Person(); 
+		j = new Person("John"); 
 		
 		j.setAge(20);
 		

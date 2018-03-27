@@ -3,7 +3,7 @@ package Constructor;
 public class Vehicle {
 	
 	
-	//This is a constructer	
+	//This is a constructor	
 	
 	private String color;
 	
