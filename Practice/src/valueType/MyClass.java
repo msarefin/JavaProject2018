@@ -8,6 +8,8 @@ public class MyClass {
 		addOneTo(x);
 		
 		System.out.println(x);
+		
+		
 	}
 	
 	static void addOneTo(int a) {
