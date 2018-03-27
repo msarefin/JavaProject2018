@@ -2,18 +2,19 @@ package valueType;
 
 public class Person {
 	
-	private String 
-	private int age;
+	private String name;
+	private int age; 
 	
 	Person(String name){
-		this.setName(name);
+		this.name= name;
+		
 	}
 	
-	public void setName(String c) {
-		this.
+	public int getAge() {
+		return age; 
 	}
 	
-	public void setAge(int c) {
-		this.age = c; 
+	public void setAge(int age) {
+		this.age=age; 
 	}
 }
