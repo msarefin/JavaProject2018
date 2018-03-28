@@ -9,13 +9,15 @@ public class ReferanceType {
 		 * Reference variable stores a reference on the memory
 		 */
 		j = new Person("John"); 
+		Person x = new Person();
 		
 		j.setAge(20);
+		x.setAge(30);
 		
 		celegrateBirthday(j);
 		
 		System.out.println(j.getAge());
-		
+		System.out.println(x.getAge());
 	}
 	
 	static void celegrateBirthday(Person p) {

@@ -18,6 +18,7 @@ public class Vehicle {
 	
 	Vehicle(){
 		this.setColor("megenta");
+		System.out.println("This is a constructor and it will always be the first one to run!!");
 	}
 	
 	Vehicle(String c){
