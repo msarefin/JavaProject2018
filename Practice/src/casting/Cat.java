@@ -10,10 +10,17 @@ public class Cat extends Animal{
 	void makeSound() {
 		System.out.println("Meow");
 	}
-	
+	 void color () {
+		 System.out.println("Black");
+	 }
 	
 	
 	public static void main(String[] args) {
 		
+//		Animal a = new Cat();
+		// This is UpCasting . Java Automatically UpCast the Cat variable to the Animal Variable
+		
+		Animal b = new Animal();
+		((Cat)b).makeSound();
 	}
 }
