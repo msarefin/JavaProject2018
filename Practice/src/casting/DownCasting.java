@@ -3,6 +3,16 @@ package casting;
 class A{
 	void mks() {
 		System.out.println("This from class A");
+		
+		B b2 = new B();
+		b2.mks();
+		b2.lgs(5);
+		
+		A aa = new B();
+		aa.mks();
+		
+		B bb = (B)aa;
+		
 	}
 }
 
