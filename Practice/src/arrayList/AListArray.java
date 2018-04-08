@@ -13,7 +13,12 @@ public class AListArray {
 		color.add("Orange");
 		
 		color.remove("Green");
+		color.size();
+		color.get(2);
 		
 		System.out.println(color);
+		System.out.println(color.size());
+		System.out.println(color.get(2));
+		System.out.println(color.contains("Green"));
 	}
 }
