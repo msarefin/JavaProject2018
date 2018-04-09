@@ -7,7 +7,7 @@ public class WorkingWithGetSet {
 		GetSet gs; 
 		gs = new GetSet(20);
 		
-		gs.setName("MS Arefin");
+		gs.setName("Alexander");
 		
 		System.out.println(gs.getName());
 		

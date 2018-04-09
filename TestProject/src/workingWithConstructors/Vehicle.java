@@ -2,19 +2,19 @@ package workingWithConstructors;
 
 public class Vehicle {
 
-	String color; 
-	
-	Vehicle(){
+	String color;
+
+	Vehicle() {
 		this.setColor("Red");
 	}
-	
-	Vehicle(String c){
+
+	Vehicle(String c) {
 		this.setColor(c);
 	}
-	
-	public void setColor	(String c) {
-		this.color = c; 
-			
+
+	public void setColor(String c) {
+		this.color = c;
+
 	}
-	
+
 }
