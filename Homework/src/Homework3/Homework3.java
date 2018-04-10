@@ -2,25 +2,29 @@ package Homework3;
 
 import java.util.Arrays;
 
-public class Homework3 {
+class Homework3 {
 
-	public static void main(String[] args) {
-		int [] a = {3,7,9,10,6};
+	Homework3(){
 		
-		System.out.println(a.length);
-		
-//		Array Values
-		System.out.println("Unsorted Array");
-		for (int n: a) {
-			System.out.println(n);
-		}
-		
-		System.out.println();
-		System.out.println("Sorted Array");
-		Arrays.sort(a);
-		
-		for (int n: a) {
-			System.out.println(n);
-		}
 	}
+	    
+	int [] a1 = {3,7,9,10,6};
+	int [] a2 = {1,2,4,5,4,6,7};
+	
+	public void A() {
+		
+	}
+	
+	void B() {
+		
+	}
+	
+	private void C() {
+		
+	}
+	
+	protected void D() {
+		
+	}
+	
 }
