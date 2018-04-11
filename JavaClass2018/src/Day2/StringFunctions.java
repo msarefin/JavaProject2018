@@ -6,7 +6,7 @@ public class StringFunctions {
 		String a = "This is a String! ";
 		int b = 23;
 		String c = " I love working in java ";
-		
+		String d = "    This is to test the trim() function      ";
 		
 		System.out.println(a+b+c); // this is concatination
 		System.out.println(a.concat(c));
@@ -22,6 +22,12 @@ public class StringFunctions {
 		System.out.println(a.compareToIgnoreCase(c));
 		System.out.println(a.equalsIgnoreCase(c));
 		System.out.println(a.toLowerCase());
+		System.out.println(a.toUpperCase());
 		System.out.println(a.isEmpty());
+		System.out.println(d.trim());
+		System.out.println(a.startsWith("I"));
+		System.out.println(d.startsWith("This"));
+		System.out.println(d.endsWith("function"));
+		
 	}
 }
