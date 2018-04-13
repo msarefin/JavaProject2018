@@ -3,7 +3,7 @@ package selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class sel {
+public class FirefoxSelenium {
 
 	public static void main(String[] args) {
 		
@@ -12,6 +12,12 @@ public class sel {
 		WebDriver driver = new FirefoxDriver();
 		
 		driver.get("http://www.yahoo.com");
+		try {
+			driver.wait(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.close();
 	}
 
