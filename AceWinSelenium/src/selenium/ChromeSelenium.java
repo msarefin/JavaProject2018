@@ -19,9 +19,11 @@ public class ChromeSelenium {
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
 
-		String PageSource = driver.getPageSource();
-		System.out.println(PageSource);
+//		String PageSource = driver.getPageSource();
+//		System.out.println(PageSource);
 
+		driver.findElement(by.)
+		
 		driver.close();
 	}
 }
