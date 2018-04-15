@@ -39,7 +39,7 @@ public class Amazon {
 		driver.findElement(By.xpath(".//*[@id='add-to-cart-button']")).click();
 		Thread.sleep(1000);
 		System.out.println("Add to cart is clicked");
-		driver.findElement(By.xpath("//button[contains('No Thanks')]")).click();
+		driver.findElement(By.xpath(".//*[@id='siNoCoverage-announce']")).click();
 		Thread.sleep(1000);
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
