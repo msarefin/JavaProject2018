@@ -1,5 +1,7 @@
 package selenium;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,21 +19,38 @@ public class Amazon {
 		
 		driver.get("http://www.amazon.com");
 		
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 		
 		WebElement searchBar = driver.findElement(By.xpath(".//*[@id='twotabsearchtextbox']"));
 		
-		Thread.sleep(5000);
-		searchBar.sendKeys("Thinkpad");
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		Thread.sleep(5000);
-		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); // this will wait for up to 10 seconds or less until the page loads. 
+		searchBar.sendKeys("macbook"); // enters the keywords 
+		System.out.println("Keyowrd entered");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(".//*[@id='nav-search']/form/div[2]/div/input")).click();
+		Thread.sleep(1000);
+		System.out.println("Go is clicked");
+		driver.findElement(By.xpath(".//*[@id='result_0']/div/div/div/div[2]/div[1]/div[1]/a/h2")).click();
+		Thread.sleep(1000);
+		System.out.println("First link is clicked");
+		driver.findElement(By.xpath(".//*[@id='add-to-cart-button']")).click();
+		Thread.sleep(1000);
+		System.out.println("Add to cart is clicked");
+		driver.findElement(By.xpath(".//*[@id='siNoCoverage-announce']")).click();
+		Thread.sleep(1000);
+		System.out.println("No Thanks is clicked");
+		driver.findElement(By.xpath(".//*[@id='nav-cart']")).click();
+		Thread.sleep(1000);
+		System.out.println("go to cart");
+		driver.findElement(By.xpath(".//*[@id='activeCartViewForm']/div[2]/div/div[4]/div/div[1]/div/div/div[2]/div/span[1]/span/input")).click();
+		Thread.sleep(1000);
+		System.out.println("Deleted from cart");
 		
 		driver.close();
+		System.out.println("Browser is closed");
 		
 		
 	}
