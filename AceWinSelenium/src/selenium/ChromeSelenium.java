@@ -8,8 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ChromeSelenium {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.Chrome.driver",
-				"C:\\Users\\Aney\\Documents\\JavaProject2018\\AceWinSelenium\\chromedriver.exe");
+		System.setProperty("webdriver.Chrome.driver","C:\\Users\\Aney\\Documents\\JavaProject2018\\AceWinSelenium\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 
@@ -62,6 +61,8 @@ public class ChromeSelenium {
 		 * 
 		 * 
 		 */
+		
+		driver.manage().window().maximize();
 		Email.sendKeys("name@email.com");
 		Pass.sendKeys("***************");
 //		login.click();
@@ -69,7 +70,11 @@ public class ChromeSelenium {
 		lname.sendKeys("Jackson");
 		mobemail.sendKeys("name@email.com");
 		npass.sendKeys("********************");
+		
+		Thread.sleep(3000);
 		submit.click();
+		
+//		driver.wait(3000); -> For some reason this doesn't work
 		
 		driver.close();
 	}

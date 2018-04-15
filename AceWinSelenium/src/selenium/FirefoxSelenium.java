@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FirefoxSelenium {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\Aney\\Documents\\JavaProject2018\\AceWinSelenium\\geckodriver.exe");
 
@@ -18,7 +18,7 @@ public class FirefoxSelenium {
 		
 		
 		
-		driver.wait();
+		
 		driver.close();
 	}
 
