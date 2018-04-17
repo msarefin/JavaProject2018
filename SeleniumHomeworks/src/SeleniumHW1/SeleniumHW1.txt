@@ -21,6 +21,7 @@ create facebook account using sign up page, provide dummy email and password.
 
 4.http://toolsqa.com/automation-practice-form/
 fill out all of information and click on button, print title.
-
+-----------------------------------------------------------------
 5.http://store.demoqa.com/
-from home page, search Iphone, then add to cart iphone 5, then 1 item | checkout, then print Sub-Total:$12.00. 
+from home page, search Iphone, then add to cart iphone 5, 
+then 1 item | checkout, then print Sub-Total:$12.00. 
