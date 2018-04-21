@@ -12,7 +12,9 @@ public class FrameClass {
 		
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress, url, PageTitle;
+		
 		webaddress = "http://toolsqa.com/iframe-practice-page/";
+		
 		if (os.contains("mac")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 			System.out.println("You are arunning a Mac Machine");
@@ -31,7 +33,7 @@ public class FrameClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		
-		driver.switchTo().frame("IF1");
+		driver.switchTo().frame("IF1"); // Switching for frame by name
 		driver.findElement(By.xpath(".//*[@id='content']/div[1]/div/div/div/div[2]/div/form/fieldset/div[8]/input")).sendKeys("Alexander");
 		driver.findElement(By.xpath(".//*[@id='content']/div[1]/div/div/div/div[2]/div/form/fieldset/div[11]/input")).sendKeys("Hamilton");
 //		driver.findElement(By.linkText("Link Test")).click();
@@ -39,7 +41,10 @@ public class FrameClass {
 		driver.switchTo().defaultContent();
 		
 		driver.switchTo().frame(1);
-		System.out.println(driver.findElement(By.xpath(".//*[@id=''table-1]/b")));
+		
+		driver.findElement(By.xpath(".//*[@id='ui-id-5']")).click();
+		
+		System.out.println(driver.findElement(By.xpath(".//*[@id='tabs-1']/p[2]")).getText());
 		
 		Thread.sleep(1000);
 		
