@@ -1,5 +1,7 @@
 package selenium;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +22,7 @@ public class ChromeSelenium {
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		String PageSource = driver.getPageSource();
 //		System.out.println(PageSource);
 
@@ -50,6 +53,7 @@ public class ChromeSelenium {
 		WebElement fname = driver.findElement(By.name("firstname"));
 		WebElement lname = driver.findElement(By.name("lastname"));
 		WebElement mobemail = driver.findElement(By.xpath(".//*[@id='u_0_f']"));
+		WebElement vmobemail = driver.findElement(By.xpath(".//*[@id='u_0_i']"));
 		WebElement npass = driver.findElement(By.xpath(".//*[@id='u_0_m']"));
 		WebElement submit = driver.findElement(By.xpath(".//*[@name='websubmit']"));
 		/*
@@ -63,12 +67,24 @@ public class ChromeSelenium {
 		 */
 		
 		driver.manage().window().maximize();
+		Thread.sleep(1000);
 		Email.sendKeys("name@email.com");
+		Thread.sleep(1000);
 		Pass.sendKeys("***************");
+		Thread.sleep(1000);
 //		login.click();
 		fname.sendKeys("Alex");
+		Thread.sleep(1000);
 		lname.sendKeys("Jackson");
+		Thread.sleep(1000);
 		mobemail.sendKeys("name@email.com");
+		Thread.sleep(1000);
+		
+		if(vmobemail.isDisplayed()) {
+			
+			vmobemail.sendKeys("name@email.com");
+		}
+		
 		npass.sendKeys("********************");
 		
 		Thread.sleep(3000);

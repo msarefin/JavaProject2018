@@ -35,14 +35,24 @@ public class ActionCL {
 		System.out.println(url);
 		System.out.println("----------------------------"+PageTitle+"----------------------------");
 		
+		
 		WebElement search = driver.findElement(By.xpath("//input[@class='search']"));
-		WebElement src = driver.findElement(By.xpath(".//*[@id='main-nav']/form/fieldset/input[1]"));
+		
+		
+//		WebElement src = driver.findElement(By.xpath(".//*[@id='main-nav']/form/fieldset/input[1]"));
+		//src declared here will cause in failure
+		
 		System.out.println("Web Element located");
+		
 		Actions ac = new Actions(driver);
+		
 		System.out.println("Instance of Acrions Class created");
+		
 		search.sendKeys("Iphone");
 		System.out.println("Iphone entered in the search bar");
+		
 		ac.moveToElement(driver.findElement(By.xpath("//input[@class='search']"))).sendKeys(Keys.ENTER).build().perform();
+		
 		System.out.println("EnterKey Pressed");
 		
 		driver.navigate().back();
@@ -57,22 +67,75 @@ public class ActionCL {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		search.clear();
+		try {
+			search.clear();
+		}catch(Exception e){
+			System.out.println("search.clear Didn't clear the field!");
+		}
+		
+//		Re-create new web element 
+		
+		
+		WebElement src =driver.findElement(By.xpath("//input[@class='search']"));
+		
+//		needs to be created many times
+		
+		src.clear();
+		System.out.println("Search field cleard");
+		Thread.sleep(2000);
 		
 //		Thread.sleep(5000);
-//		ac.sendKeys(search,"iphone"+Keys.ENTER).build().perform();
+		ac.sendKeys(src,"iphone"+Keys.ENTER).build().perform();
+//		
 		System.out.println("Iphone eneterd in in the search box and enter key pressed");
 		
+		WebElement src1 =driver.findElement(By.xpath("//input[@class='search']"));
 		
-		search.sendKeys("Iphone"+Keys.ENTER);
+		
+		
+		src1.sendKeys("Iphone"+Keys.ENTER);
 		System.out.println("Iphone entered again ");
+		
+		url = driver.getCurrentUrl(); 
+		PageTitle = driver.getTitle(); 
+		
+		System.out.println(url);
+		System.out.println("----------------------------"+PageTitle+"----------------------------");
+		
+		driver.navigate().back();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		url = driver.getCurrentUrl(); 
+		PageTitle = driver.getTitle(); 
+		
+		System.out.println(url);
+		System.out.println("----------------------------"+PageTitle+"----------------------------");
+		
 		ac.moveToElement(driver.findElement(By.xpath("//input[@class='search']"))).sendKeys(Keys.ENTER).build().perform();
 		System.out.println("EnterKey Pressed");
 		
+		url = driver.getCurrentUrl(); 
+		PageTitle = driver.getTitle(); 
+		
+		System.out.println(url);
+		System.out.println("----------------------------"+PageTitle+"----------------------------");
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.navigate().back();
 		
+		url = driver.getCurrentUrl(); 
+		PageTitle = driver.getTitle(); 
+		
+		System.out.println(url);
+		System.out.println("----------------------------"+PageTitle+"----------------------------");
+		
 		Thread.sleep(5000);
-		search.sendKeys("iphone"+"\n");
+		
+		WebElement src2 =driver.findElement(By.xpath("//input[@class='search']"));
+		
+		src2.clear();
+		Thread.sleep(1000);
+		src2.sendKeys("iphone"+"\n");
 		Thread.sleep(1000);
 		
 		driver.quit();

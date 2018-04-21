@@ -15,6 +15,8 @@ public class Amazon {
 		
 		WebDriver driver  = new ChromeDriver();
 		
+		driver.manage().deleteAllCookies();
+		
 		driver.manage().window().maximize();
 		
 		driver.get("http://www.amazon.com");
@@ -33,7 +35,7 @@ public class Amazon {
 		driver.findElement(By.xpath(".//*[@id='nav-search']/form/div[2]/div/input")).click();
 		Thread.sleep(1000);
 		System.out.println("Go is clicked");
-		driver.findElement(By.xpath(".//*[@id='result_0']/div/div/div/div[2]/div[1]/div[1]/a/h2")).click();
+		driver.findElement(By.xpath(".//div[@class='a-row a-spacing-small']")).click();
 		Thread.sleep(1000);
 		System.out.println("First link is clicked");
 		driver.findElement(By.xpath(".//*[@id='add-to-cart-button']")).click();
