@@ -2,15 +2,18 @@ package selenium;
 
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SwitchingWindows {
-
-	public static void main (String[] args) {
-		
+public class SwitchWindowFunction {
+	
+	public static void main (String[] args) throws InterruptedException {
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress,url,PageTitle;
 		webaddress = "http://toolsqa.com/automation-practice-switch-windows/";
@@ -34,11 +37,31 @@ public class SwitchingWindows {
 		driver.manage().window().maximize();
 		driver.get(webaddress);
 		
+		SwitchWindowFunction sw = new SwitchWindowFunction();
+		sw.switchWindow(driver, "//button[contains(.,'New Browser Tab')]");
+		
+		WebDriverWait wdw = new WebDriverWait(driver,30);
+		Alert a = wdw.until(ExpectedConditions.alertIsPresent());
+		
+		a.accept();
+		
+		driver.close();
+		
+		Thread.sleep(1000);
+		
+		driver.quit();
+		
+	}
+	
+	
+
+	void switchWindow(WebDriver driver, String xpath) {
+		
 		String win1 = driver.getWindowHandle(); //Gets the current windows handle code
 		System.out.println(win1);
 		System.out.println(driver.getTitle());
 		
-		driver.findElement(By.xpath("//button[contains(.,'New Browser Tab')]")).click();
+		driver.findElement(By.xpath(xpath)).click();
 		
 		Set <String> wins = driver.getWindowHandles(); // Gets all window handle codes 
 //		Set <String> var - creates a sets of strings in a list
@@ -56,11 +79,5 @@ public class SwitchingWindows {
 		
 		System.out.println(driver.getTitle());
 		
-		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"t");
-		
-		driver.close();
-		
 	}
-	
-	
 }

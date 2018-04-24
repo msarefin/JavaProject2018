@@ -2,15 +2,16 @@ package selenium;
 
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SwitchingWindows {
-
-	public static void main (String[] args) {
-		
+public class TimingAlert {
+	
+	public static void main(String[] args) {
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress,url,PageTitle;
 		webaddress = "http://toolsqa.com/automation-practice-switch-windows/";
@@ -29,38 +30,33 @@ public class SwitchingWindows {
 		
 		WebDriver driver = new ChromeDriver();
 		System.out.println("Chrome Browser Launched");
-		
-		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.get(webaddress);
+		driver.findElement(By.xpath(".//*[@id='timingAlert']")).click();
 		
-		String win1 = driver.getWindowHandle(); //Gets the current windows handle code
-		System.out.println(win1);
-		System.out.println(driver.getTitle());
+//		TimingAlert ta = new TimingAlert();
+		WebDriverWait wdw = new WebDriverWait(driver,30);
 		
-		driver.findElement(By.xpath("//button[contains(.,'New Browser Tab')]")).click();
 		
-		Set <String> wins = driver.getWindowHandles(); // Gets all window handle codes 
-//		Set <String> var - creates a sets of strings in a list
+		Alert a = wdw.until(ExpectedConditions.alertIsPresent());
 		
-		System.out.println(wins);
+		a.accept();
 		
-//		window handles are neither url nor Page Titles
+	}
+
+	void switchwindow(WebDriver driver, String xpath) {
 		
-		for(String winn: wins) { // for each loop
-			if(!winn.equals(win1)) { // compares all window handles
+		String win = driver.getWindowHandle();
+		driver.findElement(By.xpath(xpath)).click();
+		
+		Set <String> wins = driver.getWindowHandles();
+		
+		for(String winn: wins) {
+			if(!winn.equals(win)) {
 				driver.switchTo().window(winn);
 			}
 		}
 		
-		
 		System.out.println(driver.getTitle());
-		
-		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"t");
-		
-		driver.close();
-		
 	}
-	
-	
 }
