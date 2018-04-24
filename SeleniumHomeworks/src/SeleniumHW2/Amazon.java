@@ -52,7 +52,9 @@ public class Amazon {
 		WebElement popOverContent = driver.findElement(By.partialLinkText("2-Year Protection Plan"));
 		
 		if(popOverContent.isDisplayed()) {
-			driver.findElement(By.xpath(".//*[@id='a-popover-5']/div/div[1]/button")).click();
+			System.out.println(popOverContent.isDisplayed());
+			
+			driver.findElement(By.xpath("//button[@class=' a-button-close a-declarative']")).click();
 		}
 		else {
 			System.out.println("No pop over content was displayed");
@@ -61,18 +63,16 @@ public class Amazon {
 		driver.findElement(By.xpath(".//*[@id='kindleTabbedBTF']/div[2]/div[1]/table[2]/tbody/tr[5]/td[4]/a")).click();
 		System.out.println("Mission clable added");
 
-		driver.findElement(By.xpath(".//*[@id='nav-cart']/span[3]")).click();
-		System.out.println("Clicked on the cart");
+		System.out.println(driver.findElement(By.xpath(".//*[@id='hlb-ptc-btn-native']")).getText());
+		
 		driver.findElement(By.xpath(".//*[@id='hlb-ptc-btn-native']")).click();
-		System.out.println("proceed to checkout");
-		driver.findElement(By.xpath(".//*[@id='a-page']/div[1]/div[4]/div[2]/a[1]")).click();
-		System.out.println("Clicked on condition of use ");
+		System.out.println("Proceed to check out");
 		
 		url = driver.getCurrentUrl(); 
 		PageTitle = driver.getTitle(); 
 		
 		System.out.println(url);
-		System.out.println(PageTitle);
+		System.out.println("-----------------------"+PageTitle+"-----------------------");
 		
 		
 		driver.quit();
