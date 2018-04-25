@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Pages.HomePG;
+
 public class Test {
 
 	public WebDriver driver;
@@ -15,7 +17,9 @@ public class Test {
 		
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress,url,PageTitle;
-		webaddress = "http://store.demoqa.com/";
+		
+		
+		webaddress = "https://www.thegreatcourses.com/";
 		
 		if (os.contains("mac")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
@@ -36,11 +40,16 @@ public class Test {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
+		
+		driver.quit();
 	}
 	
 	@org.junit.Test
-	public void tests() {
+	public void tests() throws InterruptedException {
 		System.out.println("I am testing to see if this works");
+		
+		HomePG.ptintTitle(driver);
+		HomePG.clickspe(driver);
 	}
 	
 	
