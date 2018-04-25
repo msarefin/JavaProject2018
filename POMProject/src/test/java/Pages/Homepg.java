@@ -1,5 +1,5 @@
 package Pages;
 
-public class HomePG {
+public class Homepg {
 
 }
