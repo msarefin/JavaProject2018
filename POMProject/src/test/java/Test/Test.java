@@ -1,20 +1,27 @@
 package Test;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import Pages.HomePG;
+import Pages.Homepg;
+import Pages.HowTo;
+import Pages.SpeSale;
 
 public class Test {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	
-	@Before
-	public void initialization() {
+	@BeforeClass
+	public static void initialization() {
 		
+		System.out.println("This is before annotation");
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress,url,PageTitle;
 		
@@ -32,7 +39,7 @@ public class Test {
 		}
 
 		
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -40,17 +47,56 @@ public class Test {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
+//		junit help 
+//		it is a data drivern framework using page object model plus junit help 
 		
-		driver.quit();
+		
+		
 	}
 	
 	@org.junit.Test
-	public void tests() throws InterruptedException {
-		System.out.println("I am testing to see if this works");
+	public void tests() throws InterruptedException, IOException {
+		System.out.println("I am testing to see if this works"); 
 		
-		HomePG.ptintTitle(driver);
-		HomePG.clickspe(driver);
+		System.out.println("This is the first test");
+		Homepg.ptintTitle(driver);
+		Homepg.clickspe(driver);
+		Homepg.clickspe(driver);
+		SpeSale.printTitle(driver);
+		SpeSale.HowToDraw(driver);
+		
 	}
 	
+	@org.junit.Test
+	public void tests11() throws InterruptedException, IOException {
+		System.out.println("I am testing to see if this works"); 
+		System.out.println("This is the second test");
+		
+		SpeSale.printTitle(driver);
+		SpeSale.HowToDraw(driver);
+		
+	}
+	
+	@org.junit.Test
+	public void testt() throws IOException {
+		System.out.println("This is the third test to add to cart ");
+		
+		HowTo.PageTitle(driver);
+		HowTo.ClickDVD(driver);
+		HowTo.AddToCart(driver);
+	
+		
+		
+	}
+	
+	
+	@AfterClass
+	public static void teardown() {
+		System.out.println("This is after annotation");
+		
+		System.out.println("Test Completed!!!! ");
+		driver.manage().deleteAllCookies();
+		driver.close();
+	}
 	
 }

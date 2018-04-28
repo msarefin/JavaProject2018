@@ -3,14 +3,19 @@ package firstPractice;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PriceLine {
 
-	public static void main(String [] args) throws FileNotFoundException {
+	public static void main(String [] args) throws IOException {
 		String os = System.getProperty("os.name").toLowerCase();
 		String webaddress,url,PageTitle;
 		webaddress = "http://www.priceline.com/";
@@ -38,9 +43,11 @@ public class PriceLine {
 		File f1 = new File("C:\\Users\\Aney\\Google Drive\\PNT2018\\My class\\Selenium\\ClassCode\\priceline.xlsx");
 		FileInputStream pl = new FileInputStream(f1);
 		XSSFWorkbook wk = new XSSFWorkbook(pl);
-		XSSFSheet sh = wk.getRow(0);
+		XSSFSheet sh = wk.getSheetAt(1);
+		XSSFRow rw = sh.getRow(1);
 		XSSFCell cell = rw.getCell(0);
-		String value = cell.getStringValue();
+		
+		String value = cell.getStringCellValue();
 		wk.close();
 		
 		
