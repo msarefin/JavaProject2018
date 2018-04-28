@@ -47,6 +47,7 @@ public class ReadExcel {
 		// XSSFCell cell1 = rw1.getCell(0);
 		// String value1 = cell1.getStringCellValue();
 		// System.out.println(value1);
+		// wk1.close();
 		//
 		// -------------------------------------------------------
 
@@ -57,6 +58,7 @@ public class ReadExcel {
 		// XSSFRow rw = sh.getRow(1);
 		// XSSFCell cell = rw.getCell(0);
 		// String value = cell.getStringCellValue();
+		// wk.close();
 		// System.out.println(value);
 
 		/*
