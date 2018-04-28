@@ -34,5 +34,5 @@ public class Lib {
 	return locator;
 	}
 
-	
+	// why is this missing from mac?
 }
