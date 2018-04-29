@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -34,5 +36,12 @@ public class Lib {
 	return locator;
 	}
 
+	public static void TakeScreenShot(WebDriver driver) {
+		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(src, new File("C:\\Users\\Aney\\Google Drive\\PNT2018\\My class\\Selenium\\Screenshot\\err.png"))
+		}
+	}
+	
 	// why is this missing from mac?
 }

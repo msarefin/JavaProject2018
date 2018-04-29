@@ -10,6 +10,7 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Pages.AddToCart;
 import Pages.Homepg;
 import Pages.HowTo;
 import Pages.SpeSale;
@@ -55,20 +56,18 @@ public class Test {
 	}
 	
 	@org.junit.Test
-	public void tests() throws InterruptedException, IOException {
+	public void tests1() throws InterruptedException, IOException {
 		System.out.println("I am testing to see if this works"); 
 		
 		System.out.println("This is the first test");
 		Homepg.ptintTitle(driver);
 		Homepg.clickspe(driver);
 		Homepg.clickspe(driver);
-		SpeSale.printTitle(driver);
-		SpeSale.HowToDraw(driver);
 		
 	}
 	
 	@org.junit.Test
-	public void tests11() throws InterruptedException, IOException {
+	public void tests2() throws InterruptedException, IOException {
 		System.out.println("I am testing to see if this works"); 
 		System.out.println("This is the second test");
 		
@@ -78,7 +77,7 @@ public class Test {
 	}
 	
 	@org.junit.Test
-	public void testt() throws IOException {
+	public void tests3() throws IOException {
 		System.out.println("This is the third test to add to cart ");
 		
 		HowTo.PageTitle(driver);
@@ -88,6 +87,18 @@ public class Test {
 		
 		
 	}
+	
+	@org.junit.Test
+	public void tests4() throws IOException, InterruptedException {
+		System.out.println("This is the 4th test");
+		
+		AddToCart.printTitle(driver);
+		AddToCart.DollarAmount(driver);
+		AddToCart.ClickOnCheckout(driver);
+		
+	}
+	
+	
 	
 	
 	@AfterClass
