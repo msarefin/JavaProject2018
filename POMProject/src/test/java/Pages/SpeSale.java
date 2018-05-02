@@ -27,6 +27,8 @@ public class SpeSale extends Lib{
 		FindEle(driver,ReadProperty("Draw")).click();
 		Thread.sleep(1000);
 		
+//		TakeScreenshot(driver,"HowToDraw");
+		TakeScreenshot(driver, "HowToDraw");
 		
 		
 		

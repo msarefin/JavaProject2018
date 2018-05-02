@@ -1,0 +1,5 @@
+https://www.facebook.com/
+
+sign up facebook page using sign up information
+
+based on test cases create pom framework

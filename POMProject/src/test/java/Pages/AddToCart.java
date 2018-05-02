@@ -13,10 +13,15 @@ public class AddToCart extends Lib{
 		System.out.println(GNPrintTitle(driver));
 	}
 	
-	public static void ClickOnCheckout(WebDriver driver) throws IOException {
+	public static void ClickOnCheckout(WebDriver driver) throws IOException, InterruptedException {
 		
 		WebElement Checkout = FindEle(driver,ReadProperty("Checkout"));
+		Checkout.click();
+		Thread.sleep(1000);
 		
+		TakeScreenshot(driver, "Checkout");
+		getCurrentTime(driver);
+		System.out.println(getCurrentTime(driver));
 	}
 	
 	public static void DollarAmount(WebDriver driver) throws IOException, InterruptedException {
@@ -24,5 +29,7 @@ public class AddToCart extends Lib{
 		String dollar = FindEle(driver, ReadProperty("dollars")).getText();
 		Thread.sleep(1000);
 	}
+	
+	
 	
 }

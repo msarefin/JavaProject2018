@@ -3,9 +3,7 @@ package Test;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -59,7 +57,7 @@ public class Test {
 	public void tests1() throws InterruptedException, IOException {
 		System.out.println("I am testing to see if this works"); 
 		
-		System.out.println("This is the first test");
+		System.out.println("This is the 1st test");
 		Homepg.ptintTitle(driver);
 		Homepg.clickspe(driver);
 		Homepg.clickspe(driver);
@@ -69,7 +67,7 @@ public class Test {
 	@org.junit.Test
 	public void tests2() throws InterruptedException, IOException {
 		System.out.println("I am testing to see if this works"); 
-		System.out.println("This is the second test");
+		System.out.println("This is the 2nd test");
 		
 		SpeSale.printTitle(driver);
 		SpeSale.HowToDraw(driver);
@@ -78,7 +76,7 @@ public class Test {
 	
 	@org.junit.Test
 	public void tests3() throws IOException {
-		System.out.println("This is the third test to add to cart ");
+		System.out.println("This is the 3rd test to add to cart ");
 		
 		HowTo.PageTitle(driver);
 		HowTo.ClickDVD(driver);

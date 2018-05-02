@@ -13,15 +13,15 @@ public class C {
 		System.out.println("A a = new A();");
 		System.out.println();
 		A a = new A();
-		a.A1();
+		a.A1(); // Hello From A
 		
 		System.out.println();
 		System.out.println("B b = new B();");
 		System.out.println();
 		B b = new B();
-		b.A1();
-		b.B1();
-		b.B2();
+		b.A1(); // Hello From A
+		b.B1(); // Hello From B
+		b.B2(); // Goodbye from B
 		
 //		upcasting
 		
@@ -30,7 +30,7 @@ public class C {
 		System.out.println("upcasting :: A ab = b; || the same as A ab = new B();");
 		System.out.println();
 		A ab = b; // the same as A ab = new B();
-		ab.A1();
+		ab.A1(); // Hello From A
 		
 //		downcasting
 		
@@ -39,9 +39,9 @@ public class C {
 		System.out.println();
 		
 		B bb = (B)ab;
-		bb.A1();
-		bb.B1();
-		bb.B2();
+		bb.A1(); // Hello From A
+		bb.B1(); // Hello From B
+		bb.B2(); // Goodbye from B
 		
 		
 	}
