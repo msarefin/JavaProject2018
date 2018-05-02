@@ -24,10 +24,11 @@ public class SpeSale extends Lib{
 //		WebElement HowToDraw = driver.findElement(By.xpath("//a[contains(.,'How to Draw')]"));
 //		HowToDraw.click();
 		
-		WebElement HowTo = FindEle(driver,ReadProperty("Draw"));
-		HowTo.click();
+		FindEle(driver,ReadProperty("Draw")).click();
 		Thread.sleep(1000);
 		
+//		TakeScreenshot(driver,"HowToDraw");
+		TakeScreenshot(driver, "HowToDraw");
 		
 		
 		

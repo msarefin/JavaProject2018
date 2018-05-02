@@ -1,0 +1,12 @@
+https://www.ebay.com/
+
+	LANDING IN  ebay PAGE, PRINT TITLE
+
+	search xbox one, select xbox one
+	searchresult page, then Sort: Time: newly listed
+	click on first one
+	xbox page, print condition:new
+	click on add to cart
+	CLICK ON go to cart
+	cart page , print cart summary, total
+	TAKE SCREENSHOT
