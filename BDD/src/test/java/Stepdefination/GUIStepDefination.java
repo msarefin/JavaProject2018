@@ -19,23 +19,8 @@ public class GUIStepDefination {
 	public void initialize() {
 		System.out.println("this is before class");
 
-String os, address;
-		
-		address = "https://www.united.com/ual/en/us/";
-
-		os = System.getProperty("os.name").toLowerCase(); 
-		
-		if(os.contains("mac")) {
-			System.out.println("Project Running on MAC");
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/Mac/chromedriver");
-		}
-		else if(os.contains("windows")){
-			System.out.println("Project running on Windows");
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\Windows\\chromedriver.exe");
-		}
-		else {
-			System.out.println("Project Running on Linux");
-		}
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\INSTRUCTOR\\eclipse-workspace\\BDD\\chromedriver.exe");
 
 		// Webdriver is interface
 		driver = new ChromeDriver();
