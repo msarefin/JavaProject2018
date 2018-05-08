@@ -15,6 +15,9 @@ import cucumber.api.junit.Cucumber;
 
 public class DefaultRunner {
 
-	
+//This is a junit runner 
+//	feature location
+//	glue is the location to the StepDefinition package
+//	tags is the tags in the feature file that will be executed
 	
 }

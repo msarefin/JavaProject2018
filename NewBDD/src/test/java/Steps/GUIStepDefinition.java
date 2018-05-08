@@ -1,15 +1,19 @@
 package Steps;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Utils.Lib;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
-public class GUIStepDefinition {
+public class GUIStepDefinition extends Lib{
 
 	WebDriver driver;
 
@@ -48,6 +52,12 @@ public class GUIStepDefinition {
 	public void facebook() {
 		System.out.println(driver.getTitle());
 		
+	}
+	
+	@Then("^user is entering \"([^\"]*)\" \"([^\"]*)\"$")
+	public void Entering(String key, String value) throws IOException {
+//	entered first name and last name
+		findelement(driver,readproperties(driver, key)).sendKeys(value);;
 	}
 	
 //	----------------------------------------------------------------------------
