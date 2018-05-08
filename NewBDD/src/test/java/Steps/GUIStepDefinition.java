@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
 
 public class GUIStepDefinition {
 
@@ -43,7 +44,11 @@ public class GUIStepDefinition {
 
 //	----------------------------------------------------------------------------
 
-	
+	@Given("^user is in facebook site$")
+	public void facebook() {
+		System.out.println(driver.getTitle());
+		
+	}
 	
 //	----------------------------------------------------------------------------
 	
