@@ -5,10 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Utils.Lib;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
 
-public class GUIStepDefinition {
+public class GUIStepDefinition extends Lib{
 
 WebDriver driver;
 	
@@ -17,7 +19,7 @@ WebDriver driver;
 		System.out.println("this is before class");
 		String os, address;
 
-		address = "https://www.facebook.com/";
+		address = "https://www.ebay.com/";
 
 		os = System.getProperty("os.name").toLowerCase();
 
@@ -43,7 +45,10 @@ WebDriver driver;
 	
 //	----------------------------------------------------------
 
-	
+	@Given("^user is at eBay homepage$")
+	public void Title() {
+		System.out.println(PageTitle(driver));
+	}
 	
 	
 //	----------------------------------------------------------
