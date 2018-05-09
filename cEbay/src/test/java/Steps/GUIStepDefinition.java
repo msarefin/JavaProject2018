@@ -1,5 +1,6 @@
 package Steps;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import Utils.Lib;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
 public class GUIStepDefinition extends Lib{
 
@@ -48,6 +50,11 @@ WebDriver driver;
 	@Given("^user is at eBay homepage$")
 	public void Title() {
 		System.out.println(PageTitle(driver));
+	}
+	
+	@Then("^user enters \"([^\"]*)\" \"([^\"]*)\"$")
+	public void search(String key, String value) throws IOException {
+		WebElementSendKy(driver, ReadProperty("searchBar"), value);
 	}
 	
 	
