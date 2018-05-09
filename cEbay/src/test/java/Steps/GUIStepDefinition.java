@@ -3,6 +3,8 @@ package Steps;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -48,15 +50,46 @@ WebDriver driver;
 //	----------------------------------------------------------
 
 	@Given("^user is at eBay homepage$")
-	public void Title() {
+	public void HomeTitle() {
 		System.out.println(PageTitle(driver));
 	}
 	
 	@Then("^user enters \"([^\"]*)\" \"([^\"]*)\"$")
-	public void search(String key, String value) throws IOException {
-		WebElementSendKy(driver, ReadProperty("searchBar"), value);
+	public void searchBar(String key, String value) throws IOException {
+		WebElementSendKy(driver, ReadProperty(key), value);
+		
 	}
 	
+	@Then("^user use click on \"([^\"]*)\"$")
+	public void SearchButton(String key) throws IOException {
+		WebElementclick(driver, ReadProperty(key));
+	}
+	
+	@Then("^user is in search result page$")
+	public void SearchTitle() {
+		System.out.println(PageTitle(driver));
+	}
+	
+	public void close() {
+		boolean b = driver.findElement(By.xpath("//span[@class='prodsch-tooltip__close']")).isEnabled();
+	
+		if(b) {
+			driver.findElement(By.xpath("//span[@class='prodsch-tooltip__close']")).click();
+		}
+	
+	}
+	
+	
+	@Then("^user mouse over \"([^\"]*)\"$")
+	public void sort(String key) throws IOException {
+		mouseover(driver, ReadProperty(key));
+	}
+
+	@Then("^user clicked on \"([^\"]*)\"$")
+	public void newlisting(String key) throws IOException {
+		mouseClick(driver,ReadProperty(key));
+	}
+		
 	
 //	----------------------------------------------------------
 
