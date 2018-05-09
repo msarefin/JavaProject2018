@@ -16,6 +16,22 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Lib {
 
+	public static void WebDriverSelectorByOS() {
+		String os = System.getProperty("os.name").toLowerCase();
+
+		if (os.contains("mac")) {
+			System.out.println("Project Running on MAC");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/Mac/chromedriver");
+		} else if (os.contains("windows")) {
+			System.out.println("Project running on Windows");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\Drivers\\Windows\\chromedriver.exe");
+		} else {
+			System.out.println("Project Running on Linux");
+		}
+
+	}
+	
 	// read from locators.properties file
 	public static String ReadProperty(String key) throws IOException {
 		File f1 = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\ObjectRepository\\locators.properties");
