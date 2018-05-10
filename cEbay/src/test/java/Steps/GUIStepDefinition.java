@@ -74,20 +74,22 @@ WebDriver driver;
 		boolean b = driver.findElement(By.xpath("//span[@class='prodsch-tooltip__close']")).isEnabled();
 	
 		if(b) {
-			driver.findElement(By.xpath("//span[@class='prodsch-tooltip__close']")).click();
+			driver.findElement(By.xpath("//div[contains(text(),'Quickly compare offers in our new grouped view')]")).click();
 		}
 	
 	}
 	
 	
 	@Then("^user mouse over \"([^\"]*)\"$")
-	public void sort(String key) throws IOException {
+	public void sort(String key) throws IOException, InterruptedException {
 		mouseover(driver, ReadProperty(key));
+		Thread.sleep(1000);
 	}
 
 	@Then("^user clicked on \"([^\"]*)\"$")
-	public void newlisting(String key) throws IOException {
+	public void newlisting(String key) throws IOException, InterruptedException {
 		mouseClick(driver,ReadProperty(key));
+		Thread.sleep(1000);
 	}
 		
 	

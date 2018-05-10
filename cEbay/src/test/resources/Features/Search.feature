@@ -9,9 +9,9 @@ Then user use click on "<SearchBtn>"
 Then user is in search result page
 Then user mouse over "<sorted>"
 Then user clicked on "<newlist>"
-Then user clickd on "<FirstItem>"
+Then user clicked on "<FirstItem>"
 
 Examples:
 |Search|svalue|SearchBtn|sorted|newlist|FirstItem|
-|searchBar|Xbox 360|SearchBtn|sort|newlylisted|
+|searchBar|Xbox 360|SearchBtn|sort|newlylisted|Frstitm|
 
