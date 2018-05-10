@@ -6,8 +6,9 @@ Scenario Outline: User shall be able to purchase product
 	Given User is in the home page
 	Then User clicks on "<SpecialSale>"
 	Then User is in On sale Page
+	Then User clicks on "<sort>"
 	
 	
 	Examples:
-	|SpecialSale|
-	|spSale|
+	|SpecialSale|sort|
+	|spSale|sortby|
