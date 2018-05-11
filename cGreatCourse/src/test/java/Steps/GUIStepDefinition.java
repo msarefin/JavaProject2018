@@ -40,7 +40,7 @@ WebDriver driver;
 	
 	@Then("^User clicks on \"([^\"]*)\"$")
 	public void Special(String key) throws IOException {
-		WebElementclick(driver, ReadProperty(key));
+		mouseClick(driver, ReadProperty(key));
 	}
 	@Then("^User is in On sale Page$")
 	public void SpSaleTitle() {

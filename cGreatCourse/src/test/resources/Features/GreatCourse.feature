@@ -35,5 +35,5 @@ Scenario Outline: User shall be able to purchase product
 	
 	
 	Examples:
-	|SpecialSale|sort	|SortbyAtoZ	|secondLNK|DVD|Addtocart|ProceedToCheckout	|NewCustomer|email|evalue			|continue|firstName	|fnvalue	|lastname	|lnvalue	|comp	|compvalue		|addrs1		|Add1				|addrs2		|Add2	|cty|ctyvalue|country |cntryvalue	|state|statevalue	|zip|zipvalue	|Telephone|Telvalue   	|fax|faxvalue 		|password	|passvalue	|confpass|confpasssvalue|shiptoBill|
-	|spSale		|sortby	|sorta2z	|SecondLNK|dvd|addtoct	|checkoutlnk		|newcust	|email|Davi@jones.com	|continue|fname		|Alexander	|lname		|Hamilton	|company|AlexHamilton	|Address1	|123 lakefield rd	|Address2	|Apt 14B|city|New York|country|United States|state|New York			|zip|10024		|telephone|555-355-4578	|fax|555-365-5545	|pass		|passmyword	|confpass|passmyword	|shiptobill|
+	|SpecialSale|sort	|SortbyAtoZ	|secondLNK|DVD|Addtocart|ProceedToCheckout	|NewCustomer|email|evalue			|continue|firstName	|fnvalue	|lastname	|lnvalue	|comp	|compvalue		|addrs1		|Add1				|addrs2		|Add2	|cty|ctyvalue|country |cntryvalue	|state|statevalue	|zip|zipvalue	|Telephone|Telvalue   	|fax|faxvalue 		|password	|passvalue	|confpass|confpasssvalue|shiptoBill|contship|
+	|spSale		|sortby	|sorta2z	|SecondLNK|dvd|addtoct	|checkoutlnk		|newcust	|email|Davi@jones.com	|continue|fname		|Alexander	|lname		|Hamilton	|company|AlexHamilton	|Address1	|123 lakefield rd	|Address2	|Apt 14B|city|New York|country|United States|state|New York			|zip|10024		|telephone|555-355-4578	|fax|555-365-5545	|pass		|passmyword	|confpass|passmyword	|shiptobill|shipmethodcont|
