@@ -47,7 +47,17 @@ WebDriver driver;
 		PageTitle(driver);
 	}
 	
+	@Then("^User entered \"([^\"]*)\" \"([^\"]*)\"$")
+	public void input(String key, String value) throws IOException {
+		WebElementSendKy(driver, ReadProperty(key), value);
+		
+		
+	}
 	
+	@Then("^User selected \"([^\"]*)\" \"([^\"]*)\"$")
+	public void selected(String key, String value) throws IOException {
+		SelectionByText(driver, ReadProperty(key), value);
+	}
 	
 //	--------------------------
 	
