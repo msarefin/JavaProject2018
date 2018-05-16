@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src\\test\\resources\\Features\\GreatCourse.feature",
+		features = "src/test/resources/Features/GreatCourse.feature",
 		glue={"Steps"},
 		format = {"pretty","html:target/cucumber"},
 		tags= {"@smoke"}
