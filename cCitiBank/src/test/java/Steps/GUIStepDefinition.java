@@ -1,5 +1,6 @@
 package Steps;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -34,7 +35,28 @@ public class GUIStepDefinition extends Lib{
 		System.out.println(PageTitle(driver));
 	}
 	
-//	This is running sitiy bank
+	
+	@Then("^user clicks \"([^\"]*)\"$")
+	public void clicks(String key) throws IOException, InterruptedException {
+		WebElementclick(driver, ReadProperty(key));
+		Thread.sleep(2000);
+	}
+	
+	@Then("^user selects \"([^\"]*)\" \"([^\"]*)\"$")
+	public void selects(String key, String  value) throws IOException {
+		SelectionByText(driver, ReadProperty(key), value);
+	}
+	
+	@Then("^user enters \"([^\"]*)\" \"([^\"]*)\"$")
+	public void enters(String key, String value) throws IOException {
+		WebElementSendKy(driver, ReadProperty(key), value);
+		
+	}
+	
+	@Then("^user checks \"([^\"]*)\"$")
+	public void checks(String key) throws IOException {
+		checkBox(driver, ReadProperty(key));
+	}
 
 	
 	
