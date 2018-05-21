@@ -143,8 +143,19 @@
                   </a> <!-- browsers(chrome) -->
                   <span class="method-name">browsers</span>
                   <span class="parameters">(chrome)</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:39)
+                  <div class="stack-trace">java.lang.NoSuchMethodError: com.google.gson.GsonBuilder.setLenient()Lcom/google/gson/GsonBuilder;
+	at org.openqa.selenium.json.Json.&lt;clinit&gt;(Json.java:47)
+	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.constructMessage(HttpProfilerLogEntry.java:37)
+	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.&lt;init&gt;(HttpProfilerLogEntry.java:29)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:135)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:35)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -222,18 +233,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sam')
+data.setCell(0, 1, 'browsers')
 data.setCell(0, 2, 'corssBrowsers.VerifyTitle')
-data.setCell(0, 3, 16);
+data.setCell(0, 3, 1604);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'browsers')
+data.setCell(1, 1, 'sam')
 data.setCell(1, 2, 'corssBrowsers.VerifyTitle')
-data.setCell(1, 3, 4);
+data.setCell(1, 3, 18);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -268,7 +279,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">browsers(chrome)</span>
-                <span class="method-start">22 ms</span>
+                <span class="method-start">23 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
