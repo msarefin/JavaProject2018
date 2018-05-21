@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1685" started-at="2018-05-21T15:20:52Z" finished-at="2018-05-21T15:20:53Z">
+  <suite name="Suite" duration-ms="1594" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1685" started-at="2018-05-21T15:20:52Z" finished-at="2018-05-21T15:20:53Z">
+    <test name="Test" duration-ms="1594" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
       <class name="corssBrowsers.VerifyTitle">
-        <test-method status="PASS" signature="sam(java.lang.String)[pri:1, instance:corssBrowsers.VerifyTitle@ef9176]" name="sam" duration-ms="18" started-at="2018-05-21T15:20:52Z" finished-at="2018-05-21T15:20:52Z">
+        <test-method status="PASS" signature="sam(java.lang.String)[pri:1, instance:corssBrowsers.VerifyTitle@ef9176]" name="sam" duration-ms="16" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:11Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sam -->
-        <test-method status="FAIL" signature="browsers(java.lang.String)[pri:2, instance:corssBrowsers.VerifyTitle@ef9176]" name="browsers" duration-ms="1604" started-at="2018-05-21T15:20:52Z" finished-at="2018-05-21T15:20:53Z">
+        <test-method status="FAIL" signature="browsers(java.lang.String)[pri:2, instance:corssBrowsers.VerifyTitle@ef9176]" name="browsers" duration-ms="1514" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
           <params>
             <param index="0">
               <value>
@@ -43,7 +43,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:35)
+at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:36)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
