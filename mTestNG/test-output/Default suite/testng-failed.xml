@@ -5,7 +5,8 @@
     <classes>
       <class name="corssBrowsers.VerifyTitle">
         <methods>
-          <include name="verifyTitle"/>
+          <include name="sam"/>
+          <include name="browsers"/>
         </methods>
       </class> <!-- corssBrowsers.VerifyTitle -->
     </classes>

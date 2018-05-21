@@ -4,9 +4,9 @@
 
 
 
-  <test thread-count="5" name="Test">
+  <test name="Test">
   
-  <parameter name="webBrowser" value="chromeBrowser"/>
+  <parameter name="browser" value="chrome"/>
   
   <classes>
   <class name="corssBrowsers.VerifyTitle"/>

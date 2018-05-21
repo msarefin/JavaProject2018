@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 20 13:50:40 EDT 2018</td>
+<td>Started on:</td><td>Mon May 21 10:41:45 EDT 2018</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3945 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (86 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,34 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='corssBrowsers.VerifyTitle.verifyTitle()'><b>verifyTitle</b><br>Test class: corssBrowsers.VerifyTitle<br>Parameters: chromeBrowser</td>
-<td><div><pre>java.lang.NoSuchMethodError: com.google.gson.GsonBuilder.setLenient()Lcom/google/gson/GsonBuilder;
-	at org.openqa.selenium.json.Json.&lt;clinit&gt;(Json.java:47)
-	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.constructMessage(HttpProfilerLogEntry.java:37)
-	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.&lt;init&gt;(HttpProfilerLogEntry.java:29)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:135)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at corssBrowsers.VerifyTitle.verifyTitle(VerifyTitle.java:26)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace11138735", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace11138735'><pre>java.lang.NoSuchMethodError: com.google.gson.GsonBuilder.setLenient()Lcom/google/gson/GsonBuilder;
-	at org.openqa.selenium.json.Json.&lt;clinit&gt;(Json.java:47)
-	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.constructMessage(HttpProfilerLogEntry.java:37)
-	at org.openqa.selenium.logging.profiler.HttpProfilerLogEntry.&lt;init&gt;(HttpProfilerLogEntry.java:29)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:135)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at corssBrowsers.VerifyTitle.verifyTitle(VerifyTitle.java:26)
+<td title='corssBrowsers.VerifyTitle.browsers()'><b>browsers</b><br>Test class: corssBrowsers.VerifyTitle<br>Parameters: chrome</td>
+<td><div><pre>java.lang.NullPointerException
+	at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:39)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace30832607", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30832607'><pre>java.lang.NullPointerException
+	at corssBrowsers.VerifyTitle.browsers(VerifyTitle.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,8 +107,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>corssBrowsers.VerifyTitle@ef9176</td></tr>
+<td>0</td>
+<td>corssBrowsers.VerifyTitle@ac3a89</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='corssBrowsers.VerifyTitle.sam()'><b>sam</b><br>Test class: corssBrowsers.VerifyTitle<br>Parameters: chrome</td>
+<td></td>
+<td>0</td>
+<td>corssBrowsers.VerifyTitle@ac3a89</td></tr>
 </table><p>
 </body>
 </html>
