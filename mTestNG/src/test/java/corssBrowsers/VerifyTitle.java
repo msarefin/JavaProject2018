@@ -14,7 +14,7 @@ public class VerifyTitle {
 	
 	@Test(priority=1)
 	@Parameters({"browser"})
-	public void sam(String browser) {
+	public void sam(@Optional("firefox") String browser) {
 		System.out.println("Test1 /n");
 		System.out.println("You are using " + browser);
 	}

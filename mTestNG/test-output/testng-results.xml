@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1594" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
+  <suite name="Suite" duration-ms="1540" started-at="2018-05-21T15:50:49Z" finished-at="2018-05-21T15:50:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1594" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
+    <test name="Test" duration-ms="1540" started-at="2018-05-21T15:50:49Z" finished-at="2018-05-21T15:50:50Z">
       <class name="corssBrowsers.VerifyTitle">
-        <test-method status="PASS" signature="sam(java.lang.String)[pri:1, instance:corssBrowsers.VerifyTitle@ef9176]" name="sam" duration-ms="16" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:11Z">
+        <test-method status="PASS" signature="sam(java.lang.String)[pri:1, instance:corssBrowsers.VerifyTitle@ef9176]" name="sam" duration-ms="18" started-at="2018-05-21T15:50:49Z" finished-at="2018-05-21T15:50:49Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sam -->
-        <test-method status="FAIL" signature="browsers(java.lang.String)[pri:2, instance:corssBrowsers.VerifyTitle@ef9176]" name="browsers" duration-ms="1514" started-at="2018-05-21T15:46:11Z" finished-at="2018-05-21T15:46:12Z">
+        <test-method status="FAIL" signature="browsers(java.lang.String)[pri:2, instance:corssBrowsers.VerifyTitle@ef9176]" name="browsers" duration-ms="1451" started-at="2018-05-21T15:50:49Z" finished-at="2018-05-21T15:50:50Z">
           <params>
             <param index="0">
               <value>
