@@ -9,6 +9,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="TestNGClasses.TestCase2" />
+			<class name="TestNGClasses.TestCase3"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
