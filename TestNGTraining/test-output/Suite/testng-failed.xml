@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="SmokeTest(failed)">
+    <parameter name="Regression" value="This is a Regression test"/>
+    <parameter name="Smoke" value="This is a smoke test"/>
     <classes>
-      <class name="Selenium.TestNGTraining.CrossBrowserTesting">
+      <class name="TestNGTesting.SmokeTesting">
         <methods>
-          <include name="crossBrowser" invocation-numbers="0"/>
+          <include name="home"/>
         </methods>
-      </class> <!-- Selenium.TestNGTraining.CrossBrowserTesting -->
+      </class> <!-- TestNGTesting.SmokeTesting -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
