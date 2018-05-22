@@ -4,10 +4,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class DriverTest {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test(priority=5, description = "just testing the chrome driver ")
+	public void browser() throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\Windows\\chromedriver.exe");
 		

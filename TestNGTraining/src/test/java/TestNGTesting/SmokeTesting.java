@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class SmokeTesting {
 	
 	@Test(priority = 1, description = "Smoke Test")
 	@Parameters("Smoke")
-	public void smoke(String Smk) {
+	public void smoke(@Optional String Smk) {
 		System.out.println(Smk);
 	}
 	

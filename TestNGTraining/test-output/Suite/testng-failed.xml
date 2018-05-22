@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="SmokeTest(failed)">
-    <parameter name="Regression" value="This is a Regression test"/>
-    <parameter name="Smoke" value="This is a smoke test"/>
+  <test thread-count="5" name="TestNGCrossBrowserTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="TestNGTesting.SmokeTesting">
         <methods>
-          <include name="home"/>
+          <include name="smoke"/>
         </methods>
       </class> <!-- TestNGTesting.SmokeTesting -->
+      <class name="TestNGTesting.RegressionTesting">
+        <methods>
+          <include name="regression"/>
+        </methods>
+      </class> <!-- TestNGTesting.RegressionTesting -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
+  </test> <!-- TestNGCrossBrowserTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
