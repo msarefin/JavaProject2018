@@ -1,0 +1,300 @@
+Feature: Browsing Apple Website 
+
+@smoke 
+Scenario Outline: 
+	user shall be able to navigate using links in the Global navigation bar 
+  
+	Given user is at the Homepage 
+	When user clicks on "<Mac>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<iPad>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<iPhone>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<Watch>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<TV>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<Music>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<Support>" 
+	Then user should navigate to page 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	When user clicks on "<Cart>" 
+	Then bag content view should appear 
+	When user clicks on "<Apple_logo>" 
+	Then user should navigate to page 
+	
+	Examples: 
+		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart | 
+		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart | 
+		
+		@smoke 
+		Scenario Outline: 
+			User shall be Able to navigate the website using links in the body 
+  
+			Given user is at the Homepage 
+			When user clicks on "<iPhoneX>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<iPhoneRed_Learn>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<iPhoneRed_Buy>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<iPad_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<WWDC2018>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<MacbookPro_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<Watch_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<HomePod_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<AirPod_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			When user clicks on "<Music_iTunes_body>" 
+			Then user should navigate to page 
+			When user clicks on "<Apple_logo>" 
+			Then user should navigate to page 
+			
+			Examples: 
+				|Apple_logo| iPhoneX | iPhoneRed_Learn | iPhoneRed_Buy | iPad_body | WWDC2018 | MacbookPro_body | Watch_body | HomePod_body | AirPod_body | Music_iTunes_body | 
+				|Apple_logo| iPhoneX | iPhoneRed_Learn | iPhoneRed_Buy | iPad_body | WWDC2018 | MacbookPro_body | Watch_body | HomePod_body | AirPod_body | Music_iTunes_body | 
+				
+				@smoke 
+				Scenario Outline: user is able to navigate using footer links 
+				
+					Given user is at the Homepage 
+					When user clicks on "<Mac_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<iPad_foot>" 
+					Then user should navigate to page 
+					
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<iPhone_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<watch_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<TV_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Music_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<iTunes_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<HomePod_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<iPod_Touch_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Accessories_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Gift_Card_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Find_Store_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Genius_Bar_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks  on "<Today_at_Apple_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_Camp_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Field_Trip_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_Store_App_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Refurbished_and_clearance_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Financing_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_GiveBack_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Order_Status_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Shopping_Help_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_and_Education_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Shop_for_College_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_for_Business_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Shop_For_Business_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Manage_Your_Apple_ID_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_Store_Account_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "iCloud_com_foot" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Accessabiity_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Education_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Environment_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Inclusion_and_Diveristy_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Privacy_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Supplier_Responsibility_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Newsroom_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_Leadership_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Job_Opportunities_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Investors_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Events_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Contact_Apple_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_Store_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<find_a_Reseller_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<United_States_or_Flag_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Privacy_Policy_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Terms_of_Use_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Sales_and_Refund_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Legal_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					When user clicks on "<Site_Map_foot>" 
+					Then user should navigate to page 
+					When user clicks on "<Apple_logo>" 
+					Then user should navigate to page 
+					
+					Examples: 
+						|Apple_logo| Mac_foot | iPad_foot | iPhone_foot | watch_foot | TV_foot | Music_foot | iTunes_foot | HomePod_foot | iPod_Touch_foot | Accessories_foot | Gift_Card_foot | Find_Store_foot | Genius_Bar_foot | Today_at_Apple_foot | Apple_Camp_foot | Field_Trip_foot | Apple_Store_App_foot | Refurbished_and_clearance_foot | Financing_foot | Apple_GiveBack_foot | Order_Status_foot | Shopping_Help_foot | Apple_and_Education_foot | Shop_for_College_foot | Apple_for_Business_foot | Shop_For_Business_foot | Manage_Your_Apple_ID_foot | Apple_Store_Account_foot | iCloud_com_foot | Accessabiity_foot | Education_foot | Environment_foot | Inclusion_and_Diveristy_foot | Privacy_foot | Supplier_Responsibility_foot | Newsroom_foot | Apple_Leadership_foot | Job_Opportunities_foot | Investors_foot | Events_foot | Contact_Apple_foot | Apple_Store_foot | find_a_Reseller_foot | United_States_or_Flag_foot | Privacy_Policy_foot | Terms_of_Use_foot | Sales_and_Refund_foot | Legal_foot | Site_Map_foot | 
+						|Apple_logo| Mac_foot | iPad_foot | iPhone_foot | watch_foot | TV_foot | Music_foot | iTunes_foot | HomePod_foot | iPod_Touch_foot | Accessories_foot | Gift_Card_foot | Find_Store_foot | Genius_Bar_foot | Today_at_Apple_foot | Apple_Camp_foot | Field_Trip_foot | Apple_Store_App_foot | Refurbished_and_clearance_foot | Financing_foot | Apple_GiveBack_foot | Order_Status_foot | Shopping_Help_foot | Apple_and_Education_foot | Shop_for_College_foot | Apple_for_Business_foot | Shop_For_Business_foot | Manage_Your_Apple_ID_foot | Apple_Store_Account_foot | iCloud_com_foot | Accessabiity_foot | Education_foot | Environment_foot | Inclusion_and_Diveristy_foot | Privacy_foot | Supplier_Responsibility_foot | Newsroom_foot | Apple_Leadership_foot | Job_Opportunities_foot | Investors_foot | Events_foot | Contact_Apple_foot | Apple_Store_foot | find_a_Reseller_foot | United_States_or_Flag_foot | Privacy_Policy_foot | Terms_of_Use_foot | Sales_and_Refund_foot | Legal_foot | Site_Map_foot | 
+						
