@@ -45,7 +45,7 @@ String url;
 	}
 	
 	@When("^user clicks on \"([^\"]*)\"$")
-	public void Mac(String key) throws IOException, InterruptedException {
+	public void Click(String key) throws IOException, InterruptedException {
 		if (LocateByXpath(driver, ReadProperty(key)).isDisplayed()) {
 			mouseClick(driver, ReadProperty(key));
 		}
