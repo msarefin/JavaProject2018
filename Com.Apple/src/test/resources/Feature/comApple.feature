@@ -363,7 +363,7 @@ Scenario Outline: user shall be able to navigate using links in the Global navig
 									When user clicks on "<iPhone7_LC_AddToCart>" 
 									Then "<Message>" should appear 
 									
-									When user clicks on  "<BagSummary>" 
+									When user clicks on "<BagSummary>" 
 									Then user should navigate to page 
 									
 									When user clicks on "<Cart>" 

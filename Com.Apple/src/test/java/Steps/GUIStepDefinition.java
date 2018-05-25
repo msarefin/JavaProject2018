@@ -48,13 +48,14 @@ public class GUIStepDefinition extends Lib {
 	@When("^user clicks on \"([^\"]*)\"$")
 	public void Click(String key) throws IOException, InterruptedException {
 		String title = PageTitle(driver);
+		String url = driver.getCurrentUrl();
 		
 		
-		if (title.equalsIgnoreCase("icloud")) {
+		if (url.equalsIgnoreCase("https://www.icloud.com/")) {
 			Thread.sleep(1000);
-			driver.navigate().back();
+			driver.navigate().to("https://www.apple.com/");;
 		}
-		else if (title.equalsIgnoreCase("Sales Policies - Apple")) {
+		else if (url.equalsIgnoreCase("https://www.apple.com/shop/browse/open/salespolicies")) {
 			Thread.sleep(1000);
 			driver.navigate().back();
 		}
@@ -72,24 +73,24 @@ public class GUIStepDefinition extends Lib {
 	public void WebPage() throws InterruptedException {
 		
 		String title = PageTitle(driver);
-		
-		System.out.println("User is at the " + title);
 		url = url(driver);
-		System.out.println(url);
+		System.out.println("User is at the " + title +"::"+url);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
 		
 		
-		if (title.equalsIgnoreCase("icloud")) {
-			Thread.sleep(1000);
-			driver.navigate().back();
-		}
-		else if (title.equalsIgnoreCase("Sales Policies - Apple")) {
-			Thread.sleep(1000);
-			driver.navigate().back();
-		}
-		else if (title.equalsIgnoreCase("Investor Relations - Apple")) {
-			Thread.sleep(1000);
-			driver.navigate().back();
-		}
+//		if (url.equalsIgnoreCase("https://www.icloud.com/")) {
+//			Thread.sleep(1000);
+//			driver.navigate().back();
+//		}
+//		else if (title.equalsIgnoreCase("Sales Policies - Apple")) {
+//			Thread.sleep(1000);
+//			driver.navigate().back();
+//		}
+//		else if (title.equalsIgnoreCase("Investor Relations - Apple")) {
+//			Thread.sleep(1000);
+//			driver.navigate().back();
+//		}
 
 	}
 
