@@ -39,8 +39,8 @@ Scenario Outline:
 	Then user should navigate to page 
 	
 	Examples: 
-		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart | 
-		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart | 
+		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart |BagContent| 
+		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart |BagContent|
 		
 		@smoke 
 		Scenario Outline: 
@@ -83,8 +83,8 @@ Scenario Outline:
 			Then user should navigate to page 
 			When user clicks on "<Apple_logo>" 
 			Then user should navigate to page 
-			When user clicks on "<Music_iTunes_body>" 
-			Then user should navigate to page 
+#			When user clicks on "<Music_iTunes_body>" 
+#			Then user should navigate to page 
 			When user clicks on "<Apple_logo>" 
 			Then user should navigate to page 
 			
@@ -149,7 +149,7 @@ Scenario Outline:
 					Then user should navigate to page 
 					When user clicks on "<Apple_logo>" 
 					Then user should navigate to page 
-					When user clicks  on "<Today_at_Apple_foot>" 
+					When user clicks on "<Today_at_Apple_foot>" 
 					Then user should navigate to page 
 					When user clicks on "<Apple_logo>" 
 					Then user should navigate to page 
@@ -209,7 +209,7 @@ Scenario Outline:
 					Then user should navigate to page 
 					When user clicks on "<Apple_logo>" 
 					Then user should navigate to page 
-					When user clicks on "iCloud_com_foot" 
+					When user clicks on "<iCloud_com_foot>" 
 					Then user should navigate to page 
 					When user clicks on "<Apple_logo>" 
 					Then user should navigate to page 
@@ -306,29 +306,29 @@ Scenario Outline:
 							Given user is at the Homepage 
 							When user clicks on "<search_button>" 
 							Then "<Search_Bar>" should appear 
-							And user enters "<Search_Data>" 
-							Then search data should enter 
-							When user hits enter 
+							And user entered "<Search_Bar>" "<Search_Data>" 
+							Then "<Search_Data>" should appear 
+							When user hits enter key 
 							Then user should navigate to page 
 							
 							Examples: 
 							
 								|search_button|Search_Bar|Search_Data|
-								|search_button|Search_Bar|ipod|
-								|search_button|Search_Bar|office|
-								|search_button|Search_Bar|QuickTime|
-								|search_button|Search_Bar|Garage Band|
-								|search_button|Search_Bar|Logic Pro|
-								|search_button|Search_Bar|Games|
-								|search_button|Search_Bar|iPad|
-								|search_button|Search_Bar|iwatch|
-								|search_button|Search_Bar|iphone|
+#								|search_button|Search_Bar|ipod|
+#								|search_button|Search_Bar|office|
+#								|search_button|Search_Bar|QuickTime|
+#								|search_button|Search_Bar|Garage Band|
+#								|search_button|Search_Bar|Logic Pro|
+#								|search_button|Search_Bar|Games|
+#								|search_button|Search_Bar|iPad|
+#								|search_button|Search_Bar|iwatch|
+#								|search_button|Search_Bar|iphone|
 								
 								@smoke 
 								Scenario Outline: user shall be able to buy products on apple website 
 								
 									Given user is at the Homepage 
-									When user clicks on "<Mac>"	
+									When user clicks on "<Mac>" 
 									Then user should navigate to page 
 									When user clicks on "<Macbook_Air>" 
 									Then user should navigate to page 
@@ -337,22 +337,22 @@ Scenario Outline:
 									When user clicks on "<Select_MBA_128G>" 
 									Then user should navigate to page 
 									When user clicks on "<Upgrade_MBA_22>" 
-									Then product specification should upgrade and subtotal should increase 
+									Then "<Upgrade_MBA_22>" should appear 
 									When user clicks on "<Upgrade_MBA_512>" 
-									Then product specification should upgrade and subtotal should increase 
+									Then "<Upgrade_MBA_512>" should appear 
 									When user clicks on "<MBA_AddToBag>" 
 									Then user should navigate to page 
 									When user clicks on "<AC_AddToBag>" 
-									Then Appropriate "<Message>" Appears "<msg>"
-									When user clicks on "<IncaseClear>"
-									Then incase hard shell imaga changes 
+									Then "<Message>" should appear 
+									When user clicks on "<IncaseClear>" 
+									Then "<IncaseClear>" should appear 
 									When user clicks on "<Inc_AddToBag>" 
-									Then Appropriate "<Message>" Appears "<msg>" 
+									Then "<Message>" should appear 
 									When user clicks on "<iPhone>" 
 									Then user should navigate to page 
 									When user clicks on "<iPhone7>" 
 									Then user should navigate to page 
-									When user clicks on "<Select_iPhone7_47>"
+									When user clicks on "<Select_iPhone7_47>" 
 									Then user should navigate to page 
 									When user clicks on "<No_carrier>" 
 									Then user should navigate to page 
@@ -362,33 +362,33 @@ Scenario Outline:
 									Then user should navigate to page 
 									When user clicks on "<Select_iPhone7_AddToBag>" 
 									Then user should navigate to page 
-									When user clicks on  "<iPhone7_LC_AddToCart>" 
-									Then Appropriate "<Message>" Appears "<msg>"  
+									When user clicks on "<iPhone7_LC_AddToCart>" 
+									Then "<Message>" should appear 
 									When user clicks on "<BagSummary>" 
 									Then user should navigate to page 
 									When user clicks on "<Cart>" 
-									Then bag content view should appear 
+									Then "<BagContent>" should appear 
 									When user clicks on "<BagCheckout>" 
-									Then user should navigate to page
+									Then user should navigate to page 
 									When user clicks on "<GuestCheckout>" 
 									Then user should navigate to page 
-									When user clicks on "<storePickup>"
-									Then select your pickup store should appear 
+									When user clicks on "<storePickup>" 
+									Then "<pickupStore>" should appear 
 									When user clicks on "<ContinueToPickup>" 
-									Then user should navigate to page
-									And user enters "<first_name>" "<fnamevalue>" 
-									Then first name should enter 
-									And user enters "<last_name>" "<lnamevalue>" 
-									Then last name should enter 
-									And user enters "<email>" "<emvalue>" 
-									Then email should enter 
-									And user enters "<phonenumber>" "<pnvalue>" 
-									Then phone number should enter 
-									When user clicks on "<ContPaymenet>"
-									Then payment details page should appear 
+									Then user should navigate to page 
+									And user entered "<first_name>" "<fnamevalue>" 
+									Then "<first_name>" should appear 
+									And user entered "<last_name>" "<lnamevalue>" 
+									Then "<last_name>" should appear 
+									And user entered "<email>" "<emvalue>" 
+									Then "<email>" should appear 
+									And user entered "<phonenumber>" "<pnvalue>" 
+									Then "<phonenumber>" should appear 
+									When user clicks on "<ContPaymenet>" 
+									Then "<PaymentDetail>" should appear 
 									
 									
-Examples: 
-|Mac|Macbook_Air|Air_buy|Select_MBA_128G|Upgrade_MBA_22|Upgrade_MBA_512|MBA_AddToBag|AC_AddToBag|Message|msg				|IncaseClear|Inc_AddToBag|iPhone|iPhone7|Select_iPhone7_47|No_carrier|JetBlack|Select_iPhone7_128|Select_iPhone7_AddToBag|iPhone7_LC_AddToCart|BagSummary|storePickup|pickupStore|ContinueToPickup|first_name|fnamevalue|last_name|lnamevalue	|email|emvalue			|phonenumber|pnvalue	|ContPaymenet|
-|Mac|Macbook_Air|Air_buy|Select_MBA_128G|Upgrade_MBA_22|Upgrade_MBA_512|MBA_AddToBag|AC_AddToBag|Message|Item added to bag 	|IncaseClear|Inc_AddToBag|iPhone|iPhone7|Select_iPhone7_47|No_carrier|JetBlack|Select_iPhone7_128|Select_iPhone7_AddToBag|iPhone7_LC_AddToCart|BagSummary|storePickup|pickupStore|ContinueToPickup|first_name|John		|last_name|Smith		|email|John@gmail.com	|phonenumber|555454654	|ContPaymenet|
+									Examples: 
+										|Mac|Macbook_Air|Air_buy|Select_MBA_128G|Upgrade_MBA_22|Upgrade_MBA_512|MBA_AddToBag|AC_AddToBag|Message|msg				|IncaseClear|Inc_AddToBag|iPhone|iPhone7|Select_iPhone7_47|No_carrier|JetBlack|Select_iPhone7_128|Select_iPhone7_AddToBag|iPhone7_LC_AddToCart|BagSummary|storePickup|pickupStore|ContinueToPickup|first_name|fnamevalue|last_name|lnamevalue	|email|emvalue			|phonenumber|pnvalue	|ContPaymenet|BagContent|PaymentDetail|
+										|Mac|Macbook_Air|Air_buy|Select_MBA_128G|Upgrade_MBA_22|Upgrade_MBA_512|MBA_AddToBag|AC_AddToBag|Message|Item added to bag 	|IncaseClear|Inc_AddToBag|iPhone|iPhone7|Select_iPhone7_47|No_carrier|JetBlack|Select_iPhone7_128|Select_iPhone7_AddToBag|iPhone7_LC_AddToCart|BagSummary|storePickup|pickupStore|ContinueToPickup|first_name|John		|last_name|Smith		|email|John@gmail.com	|phonenumber|555454654	|ContPaymenet|BagContent|PaymentDetail|
 							
