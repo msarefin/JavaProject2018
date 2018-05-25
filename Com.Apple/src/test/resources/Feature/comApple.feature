@@ -305,6 +305,7 @@ Scenario Outline: user shall be able to navigate using links in the Global navig
 							Then "<Search_Bar>" should appear 
 							And user entered "<Search_Bar>" "<Search_Data>" 
 							Then "<Search_Bar>" should appear 
+							When user hits enter key
 							When user clicks on "<submit>"
 							Then user should navigate to page 
 							
@@ -312,14 +313,14 @@ Scenario Outline: user shall be able to navigate using links in the Global navig
 							
 								|search_button|Search_Bar|Search_Data	|submit|
 								|search_button|Search_Bar|ipod			|submit|
-								|search_button|Search_Bar|office		|submit|
-								|search_button|Search_Bar|QuickTime		|submit|
-								|search_button|Search_Bar|Garage Band	|submit|
-								|search_button|Search_Bar|Logic Pro		|submit|
-								|search_button|Search_Bar|Games			|submit|
-								|search_button|Search_Bar|iPad			|submit|
-								|search_button|Search_Bar|iwatch		|submit|
-								|search_button|Search_Bar|iphone		|submit|
+#								|search_button|Search_Bar|office		|submit|
+#								|search_button|Search_Bar|QuickTime		|submit|
+#								|search_button|Search_Bar|Garage Band	|submit|
+#								|search_button|Search_Bar|Logic Pro		|submit|
+#								|search_button|Search_Bar|Games			|submit|
+#								|search_button|Search_Bar|iPad			|submit|
+#								|search_button|Search_Bar|iwatch		|submit|
+#								|search_button|Search_Bar|iphone		|submit|
 								
 								@smoke 
 								Scenario Outline: user shall be able to buy products on apple website 
