@@ -17,20 +17,18 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class GUIStepDefinition extends Lib{
+public class GUIStepDefinition extends Lib {
 
-	
-WebDriver driver;
-String url;
-	
+	WebDriver driver;
+	String url;
+
 	@Before
 	public void initialize() {
-		
+
 		String address = "https://www.apple.com/";
-		 
-		
+
 		WebDriverSelectorByOS();
-		
+
 		// Webdriver is interface
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -39,74 +37,93 @@ String url;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
-//	-------------------------------------------------------------------------------
-	
+	// -------------------------------------------------------------------------------
+
 	@Given("^user is at the Homepage$")
 	public void HomeTitle() {
-		System.out.println(PageTitle(driver)+"::"+url);
-		
+		System.out.println(PageTitle(driver) + "::" + url);
+
 	}
-	
+
 	@When("^user clicks on \"([^\"]*)\"$")
 	public void Click(String key) throws IOException, InterruptedException {
-//		if (LocateByXpath(driver, ReadProperty(key)).isDisplayed()) {
-//			mouseClick(driver, ReadProperty(key));
-//		}
-//		
-//		else {
-//			driver.navigate().back();
-//		}
+		String title = PageTitle(driver);
 		
+		
+		if (title.equalsIgnoreCase("icloud")) {
+			Thread.sleep(1000);
+			driver.navigate().back();
+		}
+		else if (title.equalsIgnoreCase("Sales Policies - Apple")) {
+			Thread.sleep(1000);
+			driver.navigate().back();
+		}
+
 		mouseClick(driver, ReadProperty(key));
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		secondsWaitTillLoad(driver, 10);
-		Thread.sleep(1000);
-		AlertDismiss(driver);
 		
-		
+//		AlertDismiss(driver);
+
 	}
-	
+
 	@Then("^user should navigate to page$")
-	public void WebPage() {
-		System.out.println("User is at the " +PageTitle(driver));
-		url = url(driver); 
+	public void WebPage() throws InterruptedException {
+		
+		String title = PageTitle(driver);
+		
+		System.out.println("User is at the " + title);
+		url = url(driver);
 		System.out.println(url);
 		
-	}
-	
-	@Then ("^\"([^\"]*)\" should appear$")
-	public void appear(String key) throws IOException {
 		
+		if (title.equalsIgnoreCase("icloud")) {
+			Thread.sleep(1000);
+			driver.navigate().back();
+		}
+		else if (title.equalsIgnoreCase("Sales Policies - Apple")) {
+			Thread.sleep(1000);
+			driver.navigate().back();
+		}
+		else if (title.equalsIgnoreCase("Investor Relations - Apple")) {
+			Thread.sleep(1000);
+			driver.navigate().back();
+		}
+
+	}
+
+	@Then("^\"([^\"]*)\" should appear$")
+	public void appear(String key) throws IOException {
+
 		if (LocateByXpath(driver, ReadProperty(key)).isDisplayed()) {
-//			TakeScreenshot(driver, PageTitle(driver));
+			// TakeScreenshot(driver, PageTitle(driver));
 			System.out.println("Its Works !");
 		}
-		
+
 		else {
 			System.out.println("element not visible");
 		}
-		
+
 	}
-	
+
 	@And("^user entered \"([^\"]*)\" \"([^\"]*)\"$")
 	public void EnterData(String key, String value) throws IOException {
 		mouseTxt(driver, ReadProperty(key), value);
 	}
-	
+
 	@When("^user hits enter key$")
 	public void enterKey() {
 
 		Actions ac = new Actions(driver);
 		ac.sendKeys(Keys.RETURN);
 	}
-	
-	
-	
-	
-//	-------------------------------------------------------------------------------
+
+	// -------------------------------------------------------------------------------
 	@After
 	public void teardown() {
 		driver.manage().deleteAllCookies();
 		driver.quit();
 	}
-	
+
 }

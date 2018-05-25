@@ -1,8 +1,7 @@
 Feature: Browsing Apple Website 
 
 @smoke 
-Scenario Outline: 
-	user shall be able to navigate using links in the Global navigation bar 
+Scenario Outline: user shall be able to navigate using links in the Global navigation bar 
   
 	Given user is at the Homepage 
 	When user clicks on "<Mac>" 
@@ -43,8 +42,7 @@ Scenario Outline:
 		| Apple_logo | Mac | iPad | iPhone | Watch | TV | Music | Support | Cart |BagContent|
 		
 		@smoke 
-		Scenario Outline: 
-			User shall be Able to navigate the website using links in the body 
+		Scenario Outline:User shall be Able to navigate the website using links in the body 
   
 			Given user is at the Homepage 
 			When user clicks on "<iPhoneX>" 
@@ -300,29 +298,28 @@ Scenario Outline:
 						
 						
 						@smoke 
-						Scenario Outline: 
-							users shall be ableto search for products using search feature 
+						Scenario Outline:users shall be ableto search for products using search feature 
 					
 							Given user is at the Homepage 
 							When user clicks on "<search_button>" 
 							Then "<Search_Bar>" should appear 
 							And user entered "<Search_Bar>" "<Search_Data>" 
-							Then "<Search_Data>" should appear 
-							When user hits enter key 
+							Then "<Search_Bar>" should appear 
+							When user clicks on "<submit>"
 							Then user should navigate to page 
 							
 							Examples: 
 							
-								|search_button|Search_Bar|Search_Data|
-#								|search_button|Search_Bar|ipod|
-#								|search_button|Search_Bar|office|
-#								|search_button|Search_Bar|QuickTime|
-#								|search_button|Search_Bar|Garage Band|
-#								|search_button|Search_Bar|Logic Pro|
-#								|search_button|Search_Bar|Games|
-#								|search_button|Search_Bar|iPad|
-#								|search_button|Search_Bar|iwatch|
-#								|search_button|Search_Bar|iphone|
+								|search_button|Search_Bar|Search_Data	|submit|
+								|search_button|Search_Bar|ipod			|submit|
+								|search_button|Search_Bar|office		|submit|
+								|search_button|Search_Bar|QuickTime		|submit|
+								|search_button|Search_Bar|Garage Band	|submit|
+								|search_button|Search_Bar|Logic Pro		|submit|
+								|search_button|Search_Bar|Games			|submit|
+								|search_button|Search_Bar|iPad			|submit|
+								|search_button|Search_Bar|iwatch		|submit|
+								|search_button|Search_Bar|iphone		|submit|
 								
 								@smoke 
 								Scenario Outline: user shall be able to buy products on apple website 
@@ -364,8 +361,10 @@ Scenario Outline:
 									Then user should navigate to page 
 									When user clicks on "<iPhone7_LC_AddToCart>" 
 									Then "<Message>" should appear 
-									When user clicks on "<BagSummary>" 
+									
+									When user clicks on  "<BagSummary>" 
 									Then user should navigate to page 
+									
 									When user clicks on "<Cart>" 
 									Then "<BagContent>" should appear 
 									When user clicks on "<BagCheckout>" 
