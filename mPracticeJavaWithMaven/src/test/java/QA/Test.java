@@ -13,8 +13,10 @@ public class Test {
 	public static void main(String[] args) {
 
 		String os, address;
-		address = "http://www.yahoo.com";
+		address = "https://login.salesforce.com/";
 
+		
+//		ChromeDriver locator 
 		os = System.getProperty("os.name").toLowerCase();
 
 		if (os.contains("mac")) {
@@ -26,24 +28,21 @@ public class Test {
 			System.out.println("you are running on linux");
 		}
 
+//		Starting ChromeDriver will launch the chrome browser
 		WebDriver driver = new ChromeDriver();
+//		Delete all cookies
 		driver.manage().deleteAllCookies();
+//		Maximize the windows
 		driver.manage().window().maximize();
+//		Go to the Web Address 
 		driver.get(address);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		WebElement link = driver.findElement(By.linkText("Mail"));
+		driver.findElement(By.id("username")).sendKeys("Hello");
+		driver.findElement(By.name("pw")).sendKeys("123456");
+		driver.findElement(By.className("username")).clear();
+		driver.findElement(By.linkText(linkText));
 		
-		driver.findElement(By.name(name))
 		
-		System.out.println(link.getSize());
-		String tagname = link.getTagName();
-		String text = link.getText();
-		String links = link.;
-		
-		System.out.println(links+"::"+text);
-//		System.out.println(link);
 		driver.close();
 
 	}
