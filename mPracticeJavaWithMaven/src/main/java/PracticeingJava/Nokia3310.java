@@ -3,6 +3,8 @@ package PracticeingJava;
 public class Nokia3310 extends nokia implements NokiaInterface {
 
 	private static String ep = "Ear piece doubles as a speaker phone";
+	
+	final static String msg = "Welcome!";
 
 	Nokia3310(String model) {
 		super(model);
@@ -32,6 +34,8 @@ public class Nokia3310 extends nokia implements NokiaInterface {
 
 		String model = n3.model; 
 		
+//		msg = "Welcome to Nokia	";  ----> You cannot change the values of a final variable
+		
 		System.out.println("The price of " + model + " is $" + price);
 	}
 
@@ -59,5 +63,7 @@ public class Nokia3310 extends nokia implements NokiaInterface {
 		System.out.println("The screens displays everything !");
 
 	}
+	
+	
 
 }
