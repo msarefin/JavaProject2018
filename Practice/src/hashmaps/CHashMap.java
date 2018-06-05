@@ -11,7 +11,7 @@ public class CHashMap {
 		points.put("Rob", 733);
 		points.remove("Dave");
 		System.out.println(points.get("Dave"));
-	
+		System.out.println(points.get("Amy"));
 		System.out.println(points.size());
 		System.out.println(points.containsKey("Rob")); // Checks if the key already exist
 		System.out.println(points.containsValue(154)); // Checks if the value already exist
