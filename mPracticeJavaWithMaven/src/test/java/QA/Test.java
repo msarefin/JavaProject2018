@@ -36,11 +36,16 @@ public class Test {
 		driver.manage().window().maximize();
 //		Go to the Web Address 
 		driver.get(address);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		
 
 		driver.findElement(By.id("username")).sendKeys("Hello");
 		driver.findElement(By.name("pw")).sendKeys("123456");
 		driver.findElement(By.className("username")).clear();
-		driver.findElement(By.linkText(linkText));
+//		driver.findElement(By.linkText());
 		
 		
 		driver.close();
