@@ -1,4 +1,4 @@
-package enumurated;
+	package enumurated;
 
 public class Program {
 
