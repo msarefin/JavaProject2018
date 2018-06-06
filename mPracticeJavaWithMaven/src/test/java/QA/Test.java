@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		String os, address;
 		address = "https://login.salesforce.com/";
@@ -44,9 +44,23 @@ public class Test {
 
 		driver.findElement(By.id("username")).sendKeys("Hello");
 		driver.findElement(By.name("pw")).sendKeys("123456");
-		driver.findElement(By.className("username")).clear();
-//		driver.findElement(By.linkText());
 		
+		Thread.sleep(5000);
+		driver.findElement(By.className("username")).clear();
+		driver.findElement(By.cssSelector("a#forgot_password_link")).click();
+	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		String title = driver.getTitle();
+		
+		
+		
+		System.out.println(title);
+		System.out.println(title.length());
+		
+		System.out.println(driver.getPageSource().length());
+		
+		Thread.sleep(5000);
 		
 		driver.close();
 

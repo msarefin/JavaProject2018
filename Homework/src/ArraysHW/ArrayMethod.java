@@ -3,6 +3,8 @@ package ArraysHW;
 public class ArrayMethod {
 
 	
+//	Find the minimum and maximum from the array
+	
 	int number []= {-12,13,56,-78,-99,0,-100};
 	
 //	public void myarr() {

@@ -4,7 +4,8 @@ public class HWArray {
 
 	public static void main(String[] args) {
 		
-
+//		Find the the positive and negative number
+		
 		//ArrayMethod y = new ArrayMethod();
 		
 	
