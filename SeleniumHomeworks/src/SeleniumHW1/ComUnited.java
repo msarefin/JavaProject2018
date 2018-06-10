@@ -97,6 +97,12 @@ public class ComUnited {
 //		cabinType.click();
 		Cabintypes.selectByVisibleText("Business or First");
 		Cabintypes.selectByIndex(1);
+//		Cabintypes.selectByValue("2");
+		
+		System.out.println("-----------------------------------------------------------------------");
+		
+		
+		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Business or First is selected");
 		
 		Thread.sleep(1000);
@@ -128,12 +134,13 @@ public class ComUnited {
 		Thread.sleep(10000);
 		
 //		airline = driver.findElement(By.xpath(".//*[@id='flight-recommendation-variant1']/div[2]/div[1]/div[3]/i")).getText();	
-		price = driver.findElement(By.xpath(".//*[@id='sr_product_FIRST_110-641-UA']/div/div[2]")).getText();
+//		price = driver.findElement(By.xpath(".//*[@id='sr_product_FIRST_110-641-UA']/div/div[2]")).getText();
 		
 //		System.out.println(airline);
-		System.out.println(price);
+//		System.out.println(price);
 		
 		System.out.println(driver.findElement(By.xpath("//*[@id='farewheel-placeholder']/div/div[2]/div/a[4]/div[2]")).getText());
+		System.out.println(driver.findElement(By.tagName("a")).getSize());
 		
 		driver.close();
 	}

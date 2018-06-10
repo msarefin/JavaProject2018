@@ -26,8 +26,7 @@ public class Test {
 		if (os.contains("mac")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/Mac/chromedriver");
 		} else if (os.contains("windows")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\Drivers\\Windows\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\Windows\\chromedriver.exe");
 		} else {
 			System.out.println("you are running on linux");
 		}
@@ -82,6 +81,9 @@ public class Test {
 		
 		System.out.println(driver.getCurrentUrl());
 		
+		
+		
+		
 		Actions ac = new Actions(driver);
 		
 		ac.moveToElement(driver.findElement(By.linkText("Departments"))).build().perform();
@@ -99,7 +101,7 @@ public class Test {
 		else {
 			System.out.println("return is disabled");
 		}
-		
+
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println();
 //		Gets all the texts within the tag including the subtag
