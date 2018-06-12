@@ -32,6 +32,8 @@ public class HowManyLinks {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+//		driver.manage().window().fullscreen();
+		
 
 		driver.get(address);
 
