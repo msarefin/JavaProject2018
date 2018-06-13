@@ -97,6 +97,7 @@ public class OpenLinkINewWindow {
 			System.out.println(j+1+" | "+driver.getTitle()+" | "+driver.getCurrentUrl());
 		}
 		
+		
 		driver.quit();
 		
 	}
