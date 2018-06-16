@@ -2,16 +2,17 @@ package QA;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WorkingWithJavascriptExecutor {
 
-	public static void main(String [] args) {
+	public static void main(String [] args) throws InterruptedException {
 		
 String os, address, url, title; 
 		
-		address = "http://www.luckystarbus.com/Purchase.aspx";
+		address = "http://demo.automationtesting.in/";
 		
 		os = System.getProperty("os.name").toLowerCase();
 		
@@ -35,6 +36,12 @@ String os, address, url, title;
 		url = driver.getCurrentUrl(); 
 		title = driver.getTitle();
 		
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		String str = js.executeScript("return document.getElementById('btn2').innerHTML").toString();
+		System.out.println(str);
+		js.executeScript("document.getElementById('btn2').innerHTML='I am Here'");
+		
+		Thread.sleep(2000);
 		
 		
 		driver.quit();
