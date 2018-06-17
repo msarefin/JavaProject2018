@@ -2,8 +2,10 @@ package QA;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WorkingWithJavascriptExecutor {
@@ -12,7 +14,7 @@ public class WorkingWithJavascriptExecutor {
 		
 String os, address, url, title; 
 		
-		address = "http://demo.automationtesting.in/";
+		address = "https://www.swtestacademy.com/selenium-javascriptexecutor/";
 		
 		os = System.getProperty("os.name").toLowerCase();
 		
@@ -37,11 +39,16 @@ String os, address, url, title;
 		title = driver.getTitle();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
-		String str = js.executeScript("return document.getElementById('btn2').innerHTML").toString();
-		System.out.println(str);
-		js.executeScript("document.getElementById('btn2').innerHTML='I am Here'");
 		
-		Thread.sleep(2000);
+//		String str = js.executeScript("return document.getElementById('btn2').innerHTML").toString();
+//		System.out.println(str);
+//		js.executeScript("document.getElementById('btn2').innerHTML='I am Here'");
+		
+		//js.executeScript("arguments[0].style.border='3px solid red'", driver.findElement(By.xpath(".//*[@id='loginForm']/div/div/input")));
+		
+		js.executeScript("arguments[0].scrollIntoView(0);", driver.findElement(By.xpath(".//*[@id='post-1112']/div[2]/p[27]/a/img")));
+		
+		Thread.sleep(10000);
 		
 		
 		driver.quit();
