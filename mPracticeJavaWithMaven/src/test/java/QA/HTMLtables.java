@@ -2,7 +2,9 @@ package QA;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HTMLtables {
@@ -34,6 +36,9 @@ public class HTMLtables {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		url = driver.getCurrentUrl();
 		title = driver.getTitle();
+		
+		WebElement table = driver.findElement(By.cssSelector("div[class ='cb-col cb-col-100 cb-ltst-wgt-hdr']"));
+//		table.findElement(By.cssSelector(""))
 		
 		
 		driver.quit();
