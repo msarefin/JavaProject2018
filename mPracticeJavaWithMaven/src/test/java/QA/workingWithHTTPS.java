@@ -33,7 +33,7 @@ public class workingWithHTTPS {
 		DesiredCapabilities ch = DesiredCapabilities.chrome();
 		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ch);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 
