@@ -4,14 +4,18 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.Capabilities;
 
 public class workingWithHTTPS {
 
-	public static void main (String []args) {
+	public static void main (String []args) throws InterruptedException {
 		
 		String os, address, url, title;
 
-		address = "https://www.facebook.com/";
+		address = "https://www.cacert.com/";
 
 		os = System.getProperty("os.name").toLowerCase();
 
@@ -26,6 +30,9 @@ public class workingWithHTTPS {
 			System.out.println("Test Running from Linux");
 		}
 
+		DesiredCapabilities ch = DesiredCapabilities.chrome();
+		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -34,7 +41,7 @@ public class workingWithHTTPS {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		url = driver.getCurrentUrl();
 		title = driver.getTitle();
-		
+		Thread.sleep(5000);
 		
 		
 		driver.quit();
