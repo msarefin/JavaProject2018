@@ -1,22 +1,21 @@
 package QA;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.Capabilities;
 
-public class workingWithHTTPS {
+public class GettingScreemShot {
 
-	public static void main(String[] args) throws InterruptedException {
-
+	public static void main(string[] args) {
+		
 		String os, address, url, title;
 
-		address = "https://www.cacert.com/";
+		address = "https://www.yahoo.com/";
 
 		os = System.getProperty("os.name").toLowerCase();
 
@@ -30,29 +29,10 @@ public class workingWithHTTPS {
 		} else {
 			System.out.println("Test Running from Linux");
 		}
-
-		DesiredCapabilities ch = DesiredCapabilities.chrome();
-		ch.acceptInsecureCerts();
-
-		// OR
-
-		ch.setAcceptInsecureCerts(true);
-
-		// OR
-
-		// You can accept either insecure certificates
-
-		ch.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-
-		// You can accept SSL certificates
-
-		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
-		ChromeOptions c = new ChromeOptions();
-		c.merge(ch);
-
-		// Works only in selenium versiosn before 3.6
-		WebDriver driver = new ChromeDriver(c);
+		
+		
+		
+		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 
@@ -60,9 +40,12 @@ public class workingWithHTTPS {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		url = driver.getCurrentUrl();
 		title = driver.getTitle();
-		Thread.sleep(5000);
-
+		
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"/Screenshot/"+title+".png"));
+		
 		driver.quit();
-
+		
 	}
+	
 }

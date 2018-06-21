@@ -5,14 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Capabilities;
 
-public class workingWithHTTPS {
+public class HandelingSSLCerts {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 
 		String os, address, url, title;
 
@@ -30,28 +28,15 @@ public class workingWithHTTPS {
 		} else {
 			System.out.println("Test Running from Linux");
 		}
-
-		DesiredCapabilities ch = DesiredCapabilities.chrome();
+		
+		DesiredCapabilities ch = DesiredCapabilities.chrome(); 
 		ch.acceptInsecureCerts();
-
-		// OR
-
-		ch.setAcceptInsecureCerts(true);
-
-		// OR
-
-		// You can accept either insecure certificates
-
-		ch.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-
-		// You can accept SSL certificates
-
-		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
+//		------------------------
 		ChromeOptions c = new ChromeOptions();
-		c.merge(ch);
-
-		// Works only in selenium versiosn before 3.6
+		
+		c.addArguments("disable-infobars");
+		c.setAcceptInsecureCerts(true);
+//		------------------------
 		WebDriver driver = new ChromeDriver(c);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -60,9 +45,6 @@ public class workingWithHTTPS {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		url = driver.getCurrentUrl();
 		title = driver.getTitle();
-		Thread.sleep(5000);
-
-		driver.quit();
-
+		
 	}
 }
