@@ -42,7 +42,7 @@ public class GettingScreemShot {
 		title = driver.getTitle();
 		System.out.println(title);
 		
-		WebElement e = driver.findElement(By.cssSelector("#mega-bottombar"));
+		WebElement e = driver.findElement(By.xpath("//div[@id='mega-bottombar']"));
 
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"/Screenshot/"+title+".png"));
