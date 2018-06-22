@@ -35,7 +35,7 @@ public class HandelingSSLCerts {
 		ChromeOptions c = new ChromeOptions();
 		
 		c.addArguments("disable-infobars");
-		c.setAcceptInsecureCerts(true);
+//		c.setAcceptInsecureCerts(true);
 //		------------------------
 		WebDriver driver = new ChromeDriver(c);
 		driver.manage().deleteAllCookies();
