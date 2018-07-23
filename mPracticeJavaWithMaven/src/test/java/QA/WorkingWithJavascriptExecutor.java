@@ -40,10 +40,9 @@ public class WorkingWithJavascriptExecutor {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		// String str = js.executeScript("return
-		// document.getElementById('btn2').innerHTML").toString();
-		// System.out.println(str);
-		// js.executeScript("document.getElementById('btn2').innerHTML='I am Here'");
+//		 String str = js.executeScript("return document.getElementById('btn2').innerHTML").toString();
+//		 System.out.println(str);
+//		 js.executeScript("document.getElementById('btn2').innerHTML='I am Here'");
 
 		// js.executeScript("arguments[0].style.border='3px solid red'",
 		// driver.findElement(By.xpath(".//*[@id='loginForm']/div/div/input")));

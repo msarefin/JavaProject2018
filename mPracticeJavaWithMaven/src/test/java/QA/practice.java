@@ -12,8 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class practice {
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws InterruptedException {
+
 		String os, address, url, title;
 
 		address = "http://www.facebook.com";
@@ -30,45 +30,32 @@ public class practice {
 		} else {
 			System.out.println("Test Running from Linux");
 		}
-		
-		
+
 		WebDriver driver = new ChromeDriver();
-		
+
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().window().fullscreen();
 		driver.get(address);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 		title = driver.getTitle();
 		url = driver.getCurrentUrl();
-		
+
 		System.out.println(title);
-		
+
 		List<WebElement> we = driver.findElements(By.tagName("a"));
-		
-		System.out.println("There are " + we.size()+" links");
-		
-		 Actions ac = new Actions(driver);
-		
-		for(WebElement l:we) {
-			System.out.println(l.getAttribute("href"));
-			System.out.println(l.getText());
-			
-			ac.moveToElement(l).click().build().perform();
-			
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			if(l.getAttribute("href")!=address) {
-				driver.navigate().to(address);
-			}
-			
-		}
+
+		Actions ac = new Actions(driver);
+		int size = we.size();
+		System.out.println("There are " + we.size() + " links");
+
+	
 		
 		
-		
+
 		driver.quit();
-		
-		
+
 	}
 
 }

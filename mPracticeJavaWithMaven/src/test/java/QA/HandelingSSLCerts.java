@@ -30,7 +30,7 @@ public class HandelingSSLCerts {
 		}
 		
 		DesiredCapabilities ch = DesiredCapabilities.chrome(); 
-		ch.acceptInsecureCerts();
+//		ch.acceptInsecureCerts();
 //		------------------------
 		ChromeOptions c = new ChromeOptions();
 		
@@ -45,6 +45,9 @@ public class HandelingSSLCerts {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		url = driver.getCurrentUrl();
 		title = driver.getTitle();
+		
+		
+		driver.quit();
 		
 	}
 }
