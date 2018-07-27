@@ -1,4 +1,5 @@
 package casting;
+//------------------------Class A ----------------------------------
 
 class A{
 	void mks() {
@@ -9,6 +10,8 @@ class A{
 	
 }
 
+//------------------------Class B ----------------------------------
+
 class B extends A{
 	void mks() {
 		System.out.println("This is from clas B ");
@@ -18,6 +21,9 @@ class B extends A{
 		System.out.println(l);
 	}
 }
+
+//------------------------Class DownCasting (main class) ----------------------------------
+
 
 public class DownCasting {
 
