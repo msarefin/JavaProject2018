@@ -39,6 +39,8 @@ public class DownCasting {
 		System.out.println();
 //		Upcasting
 		
+		
+		System.out.println("***************upcasting**************");
 		A a1 = b; 
 		
 		// Same as A a1 = new B();
@@ -47,6 +49,7 @@ public class DownCasting {
 		System.out.println();
 //		Downcasting
 		
+		System.out.println("*******************Downcasting****************");
 		B b1 = (B)a1;
 		b1.mks(); // This is from class B 
 		b1.lgs(3); // 3

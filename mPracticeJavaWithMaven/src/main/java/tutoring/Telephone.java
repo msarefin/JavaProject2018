@@ -12,6 +12,7 @@ public class Telephone {
 	
 	// -----------------Constructors-------------------
 	
+	
 	Telephone(){ // This is a constructor
 		System.out.println(name);
 	}
@@ -38,6 +39,9 @@ public class Telephone {
 		
 		String msg = "Telephones have come a long way";
 		
+		Telephone t; 
+		
+		t = new Telephone();
 	}
 	
 	
