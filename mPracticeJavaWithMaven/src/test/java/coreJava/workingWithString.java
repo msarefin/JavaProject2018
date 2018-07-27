@@ -15,11 +15,11 @@ public class workingWithString {
 		
 		System.out.println(a+" "+b+" "+num);
 		
-		System.out.println(a.charAt(12)); // character at the 12th index, index always starts with 0 
-		System.out.println(a.equals(b)); // compares two strings 
-		System.out.println(a==a1); //compares two strings
-		System.out.println(a.length()); // How long is the string
-		System.out.println(a.codePointAt(0)); // returns the unicode of the character 
+		System.out.println("character at the 12th index is : "+a.charAt(12)); // character at the 12th index, index always starts with 0 
+		System.out.println("Compares two string using concat function: "+ a.equals(b)); // compares two strings 
+		System.out.println("Compares two string using == sign:"+a==a1); //compares two strings
+		System.out.println("Determines the length of the String : "+a.length()); // How long is the string
+		System.out.println("returns the unicode of the character: "+a.codePointAt(0)+" which is " +(char)76); // returns the unicode of the character 
 		System.out.println();
 		System.out.println(a.concat(b)); // concatinate the two strings
 		System.out.println(a.indexOf('t')); //Gets the index position of the character
