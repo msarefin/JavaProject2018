@@ -31,7 +31,9 @@ public class Food {
 		System.out.println(greeting);
 	}
 	
-	Food(String msg) {
+	
+	
+	Food(String msg) { //This constructor is  overloaded
 		
 		System.out.println(msg);
 
@@ -53,7 +55,7 @@ public class Food {
 
 	}
 
-	void taste(String a) {
+	void taste(String a) { // This method is over loaded
 
 		taste = a;
 		System.out.println(taste);
