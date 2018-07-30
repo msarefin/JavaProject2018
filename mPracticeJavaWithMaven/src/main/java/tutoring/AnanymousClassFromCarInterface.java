@@ -31,7 +31,13 @@ public class AnanymousClassFromCarInterface {
 		cf.color("red");
 		cf.door(4);
 		
+		AnanymousClassFromCarInterface an = new AnanymousClassFromCarInterface();
+		
+		
+		
 		
 	}
+	
+	
 	
 }
