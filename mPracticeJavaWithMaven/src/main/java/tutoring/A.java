@@ -1,5 +1,7 @@
 package tutoring;
 
+import oop.camry;
+
 public class A {
 
 	
@@ -44,6 +46,9 @@ public class A {
 		}
 	
 	public static void main(String[] args) {
+		
+		camry cd = new camry();
+		System.out.println(cd.ToyptaCamry+"88888888**********");
 		
 		String c = "local variable";
 		
