@@ -2,7 +2,7 @@ package oop;
 
 public class camry {
 
-	 String ToyptaCamry = "My faborate car!";
+	 public String ToyptaCamry = "My faborate car!";
 	
 	public static void main(String[] args) {
 		
