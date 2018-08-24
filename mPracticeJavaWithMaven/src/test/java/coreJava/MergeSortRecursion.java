@@ -8,16 +8,18 @@ public class MergeSortRecursion {
 	static int[] temp;
 
 	public static void main(String[] args) {
-		arr = new int[13];
+		arr = new int[5];
 		temp = new int[arr.length];
 		Random r = new Random();
 
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = r.nextInt(100);
+			System.out.print(i+"\t");
 		}
 
+		System.out.println("\n");
 		for (int n : arr) {
-			System.out.print(n + " ");
+			System.out.print(n + "\t");
 		}
 
 		System.out.println("\n");
@@ -25,7 +27,7 @@ public class MergeSortRecursion {
 		mergeSort(0, arr.length - 1);
 
 		for (int in : arr) {
-			System.out.print(in + " ");
+			System.out.print(in + "\t");
 		}
 
 	}
@@ -33,14 +35,15 @@ public class MergeSortRecursion {
 	static void mergeSort(int l, int h) {
 
 		for (int i = 0; i <= h; i++) {
-			System.out.print(arr[i] + " ");
+			
+			System.out.print(arr[i] + " \t");
 		}
 
 		System.out.println("");
 
-		if (l != h) {
-			int m = l + (h - l) / 2;
-			mergeSort(l, m);
+		if (l != h) { // starts with l = 0 and h = 12
+			int m = l + (h - l) / 2; // m = 6 
+			mergeSort(l, m); // from 0 to 6 
 			mergeSort(m + 1, h);
 
 			sort(l, m, h);
