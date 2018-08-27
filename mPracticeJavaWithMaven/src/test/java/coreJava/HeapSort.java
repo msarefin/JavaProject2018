@@ -1,65 +1,105 @@
 package coreJava;
 
+import java.util.Random;
+
 public class HeapSort {
 
-    private static int[] array = new int[]{5, 3, 6, 4, 8, 9 , 1, 10};
+	private static int[] array = new int[8]; 
+	//{ 5, 3, 6, 4, 8, 9, 1, 10 };
 
-    public static void main(String[] args) {
-        heapSort();
+	public static void main(String[] args) {
 
-        for(int i : array) {
-            System.out.println(i);
-        }
-    }
+		Random rand = new Random(); 
+		
+		for(int i = 0; i < array.length; i++) {
+			array[i] = rand.nextInt(26);
+		}
+		
+		
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
 
-    private static void heapSort() {
-        int length = array.length;
+		System.out.println("\n");
 
-        buildMaxHeap(array, length);
-        for(int i = length - 1; i > 0; i--) {
-            int temp = array[0];
-            array[0] = array[i];
-            array[i] = temp;
-            maxHeapify(array, 1, i);
-        }
-    }
+		heapSort();
 
-    private static void buildMaxHeap(int[] array, int heapSize) {
-        if(array == null) {
-            throw new NullPointerException("null");
-        }
-        if(array.length <=0 || heapSize <= 0) {
-            throw new IllegalArgumentException("illegal");
-        }
-        if(heapSize > array.length) {
-            heapSize = array.length;
-        }
+		System.out.println("\n");
 
-        for(int i = heapSize/2; i > 0; i--) {
-            maxHeapify(array, i, heapSize);
-        }
-    }
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
+	}
 
-    private static void maxHeapify(int[] array, int index, int heapSize) {
-        int l = index * 2;
-        int r = l + 1;
-        int largest;
+	private static void heapSort() {
+		int length = array.length;
 
-        if(l <= heapSize && array[l - 1] > array[index - 1]) {
-            largest = l;
-        } else {
-            largest = index;
-        }
+		buildMaxHeap(array, length);
 
-        if(r <= heapSize && array[r - 1] > array[largest - 1]) {
-            largest = r;
-        }
+		for (int i = length - 1; i > 0; i--) {
+			int temp = array[0];
+			array[0] = array[i];
+			array[i] = temp;
+			maxHeapify(array, 1, i);
+		}
 
-        if(largest != index) {
-            int temp = array[index - 1];
-            array[index - 1] = array[largest - 1];
-            array[largest - 1] = temp;
-            maxHeapify(array, largest, heapSize);
-        }
-    }
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
+
+		System.out.println();
+	}
+
+	private static void buildMaxHeap(int[] array, int heapSize) {
+		if (array == null) {
+			throw new NullPointerException("null");
+		}
+		if (array.length <= 0 || heapSize <= 0) {
+			throw new IllegalArgumentException("illegal");
+		}
+		if (heapSize > array.length) {
+			heapSize = array.length;
+		}
+
+		for (int i = heapSize / 2; i > 0; i--) {
+			maxHeapify(array, i, heapSize);
+		}
+
+//        for(int i : array) {
+//            System.out.print(i+" ");
+//        }
+//        
+//        System.out.println();
+
+	}
+
+	private static void maxHeapify(int[] array, int index, int heapSize) {
+		int l = index * 2;
+		int r = l + 1;
+		int largest;
+
+		if (l <= heapSize && array[l - 1] > array[index - 1]) {
+			largest = l;
+		} else {
+			largest = index;
+		}
+
+		if (r <= heapSize && array[r - 1] > array[largest - 1]) {
+			largest = r;
+		}
+
+		if (largest != index) {
+			int temp = array[index - 1];
+			array[index - 1] = array[largest - 1];
+			array[largest - 1] = temp;
+			maxHeapify(array, largest, heapSize);
+
+			for (int i : array) {
+				System.out.print(i + " ");
+			}
+			
+			System.out.println();
+		}
+
+	}
 }
