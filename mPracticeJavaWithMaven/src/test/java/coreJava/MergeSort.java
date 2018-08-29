@@ -9,6 +9,9 @@ public class MergeSort {
 
 	public static void main(String[] args){
 
+		
+		
+		
 		//Initializing array of random numbers
 		array = new int[20];
 		tempArray = new int[array.length];
