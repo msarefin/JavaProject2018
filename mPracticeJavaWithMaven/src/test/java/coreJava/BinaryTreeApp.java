@@ -2,14 +2,14 @@ package coreJava;
 
 class Node{
 	int data; 
-	Node left; 
-	Node right; 
+	nNode left; 
+	nNode right; 
 }
 
 class BinaryTree{
 	
-	public Node createNode(int value) {
-		Node a = new Node();
+	public nNode createNode(int value) {
+		nNode a = new nNode();
 		a.data = value;
 		a.left = null; 
 		a.right = null;
@@ -23,7 +23,7 @@ public class BinaryTreeApp {
 
 	public static void main(String[] args) {
 		BinaryTree a  =new BinaryTree(); 
-		Node root = a.createNode(2);
+		nNode root = a.createNode(2);
 		root.left = a.createNode(7);
 		root.right = a.createNode(5);
 		root.left.left = a.createNode(2);
