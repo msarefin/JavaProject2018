@@ -23,13 +23,13 @@ class ArraySh {
 	}
 
 //--------------------------------------------------------------
-public void display() // displays array contents
-{
-System.out.print("A=");
-for(int j=0; j<nElems; j++) // for each element,
-System.out.print(theArray[j] + " "); // display it
-System.out.println(" ");
-}
+	public void display() // displays array contents
+	{
+		System.out.print("A=");
+		for (int j = 0; j < nElems; j++) // for each element,
+			System.out.print(theArray[j] + " "); // display it
+		System.out.println(" ");
+	}
 
 //--------------------------------------------------------------
 	public void shellSort() {

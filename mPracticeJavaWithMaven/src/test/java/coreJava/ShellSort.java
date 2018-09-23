@@ -12,7 +12,7 @@ class ShellSort {
 		System.out.println();
 	}
 
-	static int loopcount;
+//	static int loopcount;
 
 	int sort(int arr[]) {
 
@@ -20,7 +20,7 @@ class ShellSort {
 
 		for (int gap = n / 2; gap > 0; gap /= 2) {
 
-			for (int i = gap; i < n; i += 1) {
+			for (int i = gap; i < n; i ++) {
 
 				int temp = arr[i];
 
@@ -30,14 +30,14 @@ class ShellSort {
 
 				arr[j] = temp;
 
-				loopcount++;
+//				loopcount++;
 			}
 		}
 		return 0;
 	}
 
 	public static void main(String args[]) {
-		int arr[] = new int[10];
+		int arr[] = new int[11];
 
 		Random rand = new Random();
 		
@@ -56,6 +56,6 @@ class ShellSort {
 		System.out.println("Array after sorting");
 		printArray(arr);
 
-		System.out.println("Loop Counter : \n" + loopcount);
+//		System.out.println("Loop Counter : \n" + loopcount);
 	}
 }

@@ -8,7 +8,7 @@ public class MergeSortRecursion {
 	static int[] temp;
 
 	public static void main(String[] args) {
-		arr = new int[5];
+		arr = new int[13];
 		temp = new int[arr.length];
 		Random r = new Random();
 
