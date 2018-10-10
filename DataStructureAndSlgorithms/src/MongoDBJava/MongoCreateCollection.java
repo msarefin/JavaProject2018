@@ -1,35 +1,29 @@
 package MongoDBJava;
 
+import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-import org.bson.Document;
-
-import com.mongodb.MongoClient;
-
-public class MongoAggregation {
+public class MongoCreateCollection {
 
 	public static void main(String[] args) {
-		String uri = "mongobd://localhost:27017";
+		String uri = "mongodb://localhost:27017";
 		MongoClientURI clientURI = new MongoClientURI(uri);
-		
 		MongoClient mongoClient = null; 
 		
 		try {
+			
 			mongoClient = new MongoClient(clientURI);
-			
+			System.out.println("connected to MongoDB");
 			MongoDatabase mongoDatabase = mongoClient.getDatabase("MongoDB");
-			MongoCollection<Document> collection = mongoDatabase.getCollection("test");
-			
-			System.out.println("MongoDB Connected");
-			
-			
-			
+			System.out.println("connected to Database");
+			mongoDatabase.createCollection("Flower");
+			System.out.println("created collection but no data added");
 			
 		}catch(Exception e) {
 			
-		}finally {
+		}
+		finally {
 			mongoClient.close();
 		}
 	}

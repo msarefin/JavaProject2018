@@ -29,10 +29,11 @@ public class MongoInsertingDocument {
 			
 			MongoCollection collection = mongoDatabase.getCollection("test");
 
-			Document document = new Document("Name", "Dinesh");
-			document.append("Gender", "male");
-			document.append("Address", new Document("Street Address", "123 Jackson ave").append("County", "Brooklyn").append("State", "New York").append("ZipCode", 11432));
-
+			Document document = new Document("Name", "Danny Boyl");
+			document.append("Gender", "Female");
+			document.append("Age", "24");
+			document.append("Address", new Document("Street Address", "323 110th Pl").append("County", "Queens").append("State", "New York").append("ZipCode", 11433));
+			document.append("Country", "USA");
 			collection.insertOne(document);
 
 		} finally {
